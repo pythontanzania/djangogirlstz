@@ -1,0 +1,44 @@
+name: scp files
+on:
+  push:
+    branches:
+      - main
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: copy file via ssh password
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        source: "*"
+        target: ${{ secrets.TARGET }}
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: |
+          export NVM_DIR="$HOME/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+          [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+          cd ${{ secrets.TARGET }}
+          npm install
+          npm run build
+          cp -r dist/* ${{ secrets.PUBLIC }}
+    - name: Mattermost Notification
+      uses: tferreira/matterfy@releases/v1
+      if: always()
+      with:
+        type: ${{ job.status }}
+        job_name: '*Deploy Sales Portal*'
+        channel: 'rashal-development'
+        url: ${{ secrets.MATTERMOST_WEBHOOK }}
