@@ -1,6 +1,6 @@
 # djangogirlstz
-Django Girls Tanzania website
 
+Django Girls Tanzania website
 
 > Django Girls Tanzania website uses a batteries-included Django starter project. For a production-ready version see the book [Django for Professionals](https://djangoforprofessionals.com).
 
@@ -24,8 +24,8 @@ Django Girls Tanzania website
 PyCon website can be installed via Pip, Pipenv, or Docker depending upon your setup. To start, clone the repo to your local computer and change into the proper directory.
 
 ```
-$ git clone https://github.com/pycontanzania/pycon.or.tz.git pycontz
-$ cd pycontz
+$ git clone https://github.com/pythontanzania/djangogirlstz.git djangogirlstz
+$ cd djangogirlstz
 ```
 
 ### Pip
@@ -70,7 +70,7 @@ $ pipenv shell
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome! See [CONTRIBUTING.md](https://github.com/pycontanzania/website/blob/master/CONTRIBUTING.md).
+Contributions, issues and feature requests are welcome! See [CONTRIBUTING.md](CONTRIBUTING.mdd).
 
 ## ⭐️ Support
 
