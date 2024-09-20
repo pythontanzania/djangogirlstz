@@ -70,7 +70,7 @@ $ pipenv shell
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome! See [CONTRIBUTING.md](CONTRIBUTING.mdd).
+Contributions, issues and feature requests are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## ⭐️ Support
 
