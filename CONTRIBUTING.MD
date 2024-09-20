@@ -11,8 +11,8 @@ This is a project for documenting standards for writing code.
 
 ## Contents
 
-1. [General guidelines](general.md)
-2. [Git guidelines](git.md)
+1. [General guidelines](GENERAL.md)
+2. [Git guidelines](GIT.md)
 
 ## TODOs
 
