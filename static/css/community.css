@@ -1,0 +1,172 @@
+/* community.css */
+
+/* Navbar styling */
+.navbar {
+    background-color: transparent !important; /* Keep navbar transparent */
+    position: fixed; /* Fixed position */
+    width: 100%; /* Full width */
+    z-index: 1030; /* Ensure it’s above other content */
+}
+
+.navbar-nav {
+    justify-content: center; /* Center the nav items */
+}
+
+.nav-link {
+    color: #F79420; 
+}
+
+.nav-link:hover {
+    color: #C77B1A; 
+}
+
+
+
+
+
+.card {
+    border-radius: 0; 
+    height: 85vh; 
+    overflow: hidden;
+    border: none;
+    background-color: transparent; 
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 0; 
+}
+
+.card-img-overlay {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 2; 
+    width: 100%; 
+}
+
+.community-paragraph {
+    color: white; 
+}
+
+.community-heading{
+    color: #F79420;
+    font-size: 48px;
+    font-family: 'Munish',sans-serif;
+    font-weight: 900;
+}
+
+/* community.css */
+
+/* community.css */
+.custom-cards-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding: 0 20px;
+    width: 100%;
+}
+
+.custom-card {
+    width: 80%; 
+    max-width: 400px; 
+    height: 350px; 
+    background-color: #eeeeee; 
+    border-radius: 30px 30px 30px 30px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    margin: 20px auto; 
+    opacity: 1; 
+    position: relative; 
+    z-index: 1; 
+    margin-top: -100px;
+}
+
+
+.custom-card .icon {
+    margin-bottom: 20px; /* Space between icon and title */
+    color: #F79420; /* Icon color */
+}
+
+.card-title {
+    font-family: 'Mulish', sans-serif; 
+    font-weight: 900; 
+    font-size: 24px; 
+    margin-bottom: 10px; /* Space between title and paragraph */
+}
+
+.card-text {
+    font-family: 'Mulish', sans-serif; 
+    font-weight: 200; 
+    font-size: 16px; 
+    text-align: center; /* Center text */
+}
+
+.unique-card-style {
+   
+    border-radius: 0px 0px 0px 0px;
+    background-color: white;
+    overflow: hidden;
+    text-align: center;
+    margin: 20px;
+    border: none;
+}
+
+.unique-card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.unique-card-body {
+    padding: 15px;
+}
+
+.unique-card-text {
+    font-size: 16px;
+    color: black;
+    font-weight: 400;
+    background-color: white;
+}
+
+.unique-card-body p {
+    margin-top: 10px;
+    color: #000000;
+}
+
+.left-card {
+    background-color: #eeeeee; /* Light gray background */
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    height: 400px; /* Set a fixed height for the left card */
+}
+
+.carousel-container {
+    background-color: white; /* Background for carousel */
+    display: flex;
+    justify-content: flex-start; /* Align carousel to the left */
+    align-items: center; /* Center carousel items vertically */
+    position: relative; /* Required for absolute positioning of images */
+    margin-left: -30px; /* Move the carousel to the left */
+}
+
+.carousel-inner {
+    width: 100%; /* Full width for carousel inner */
+}
+
+.carousel-inner img {
+    width: auto; /* Auto width to maintain aspect ratio */
+    height: 300px; /* Set a fixed height for the images */
+    object-fit: cover; /* Cover the area without distortion */
+    margin: 0; /* No margins on images */
+}
