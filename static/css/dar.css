@@ -1,0 +1,184 @@
+.navbar {
+    background-color: transparent !important; /* Keep navbar transparent */
+    position: fixed; /* Fixed position */
+    width: 100%; /* Full width */
+    z-index: 1030; /* Ensure it’s above other content */
+}
+
+.navbar-nav {
+    justify-content: center; /* Center the nav items */
+}
+
+.nav-link {
+    color: #F79420; 
+}
+
+.nav-link:hover {
+    color: #C77B1A; 
+}
+
+.card {
+    border-radius: 0; 
+    height: 85vh; 
+    overflow: hidden;
+    border: none;
+    background-color: transparent; 
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 0; 
+}
+
+.card-img-overlay {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 2; 
+}
+
+.community-paragraph {
+    color: white; 
+}
+
+.community-heading {
+    color: #F79420;
+    font-size: 48px;
+    font-family: 'Munish', sans-serif;
+    font-weight: 900;
+}
+
+.container {
+    padding-top: 20px;
+    padding: 0; /* Ensure no padding */
+    width: 100%; /* Full width */
+}
+
+.row {
+    border-bottom: 1px solid black;
+    margin-left: auto; /* Center the row */
+    margin-right: auto; /* Center the row */
+}
+
+.col h2 {
+    font-family: 'Mulish', sans-serif; 
+    font-size: 96px;
+    font-weight: 600;
+    line-height: 120.48px;
+}
+
+.col p {
+    font-family: 'Mulish', sans-serif; 
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 40.16px;
+}
+
+/* Custom class to remove horizontal borders */
+.no-horizontal-line {
+    border: none; /* Ensure no unwanted borders around the container */
+    padding: 0; /* Avoid any default padding issues */
+}
+
+/* Apply vertical borders between columns */
+.border-left-only {
+    border-left: 2px solid #ccc; /* Vertical line between columns */
+    border-top: none; /* Make sure no top border is added */
+    border-bottom: none; /* Ensure no bottom border */
+    margin: 0;
+    padding: 0;
+}
+
+/* No border for the first column */
+.no-horizontal-line .col:first-child {
+    border-left: none;
+}
+
+/* Optional: Reset margins and paddings to avoid unwanted gaps */
+.container h2, .container p {
+    margin: 0;
+    padding: 0;
+}
+
+.no-horizontal-line .col {
+    padding-top: 0; /* Ensure no padding that might create a horizontal effect */
+    padding-bottom: 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.view-all-btn {
+    background-color: #F79420; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* Center the button */
+    width: 318px; /* Fixed width */
+}
+.custom-image {
+    height: 308px; /* Set the height of the images */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    width: 100%; /* Make the images responsive */
+    border-radius: 20px; /* Optional: Add rounded corners */
+}
+/* Ensure no unwanted borders or horizontal lines */
+.container, .row {
+    border: none; /* No borders */
+    padding: 0; /* No padding */
+    margin: 0; /* No margin */
+}
+
+/* Optional: Resetting margin on specific headings and paragraphs inside the container */
+.container h1, .container h2, .container p {
+    margin: 0; /* Remove margins */
+    padding: 0; /* Remove padding */
+}
+
+/* Custom class to remove horizontal lines specifically */
+.no-horizontal-line {
+    border: none; /* No border */
+    padding: 0; /* No padding */
+    margin: 0; /* No margin */
+}
+.custom-card {
+    width: 763px; /* Set the card width */
+    height: 237px; /* Set the card height */
+    border-radius: 30px 30px 30px 30px; /* Custom border radius */
+    opacity: 1; /* Set opacity to fully visible */
+    position: relative; /* Keep it relative for absolute positioning of child elements */
+    margin: 0 auto; /* Center the card */
+    background-color: #EEEEEE; /* Background color */
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column; /* Column direction for child elements */
+    justify-content: flex-start; /* Align items to the top */
+    padding: 20px; /* Add padding for internal spacing */
+}
+
+.profile-pic {
+    width: 80px; /* Set the desired size */
+    height: 80px; /* Set the desired size */
+    margin-top: -40px; /* Adjust to move the image up */
+    border: 5px solid white; /* Optional: white border for the profile picture */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Space between text and icons */
+}
+
+.social-icon {
+    width: 24px; /* Set the desired icon size */
+    height: 24px; /* Set the desired icon size */
+}

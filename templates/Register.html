@@ -1,0 +1,129 @@
+{% load compress %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Django Girls Tanzania</title>
+    
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <style>
+        /* Custom Styles to match the image height to the form */
+        .carousel-inner img {
+            object-fit: cover;
+            height: 100%;
+        }
+
+        .register-container {
+            display: flex;
+            align-items: center;
+            min-height: 100%;
+        }
+
+        /* Ensure both the carousel and form have equal heights */
+        .carousel-container, .form-container {
+            min-height: 100%;
+        }
+
+        .carousel-item img {
+            max-height: 600px; /* Adjust this value if necessary */
+        }
+
+        @media screen and (max-width: 768px) {
+            .carousel-container {
+                display: none; /* Hide carousel on small screens */
+            }
+        }
+    </style>
+
+    {% compress css %}
+    
+    {% endcompress %}
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Left side: Carousel -->
+        <div class="col-md-6 carousel-container">
+            <div id="carouselExampleIndicators" class="carousel slide h-100" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner h-100">
+                    <div class="carousel-item active">
+                        <img src="{% static 'djangogirlstz/images/Rectangle 116.png' %}" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'djangogirlstz/images/Rectangle 117.png' %}" class="d-block w-100" alt="Image 2">
+                    </div>
+                    
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Right side: Registration Form -->
+        <div class="col-md-6 form-container">
+            <h3 class="text-center mb-4">Join Our Community</h3>
+            
+            <!-- Google Sign In Button -->
+            <button class="btn btn-google btn-block mb-3">
+                <img src="{% static 'djangogirlstz/images/google.png' %}" alt="Google Logo" width="20" height="20" class="me-2">
+                Sign in with Google
+            </button>
+    
+            <!-- Divider -->
+            <div class="divider"><span>OR</span></div>
+    
+            <!-- Registration Form -->
+            <form>
+                <div class="mb-3">
+                    <label for="school-email" class="form-label">School Email</label>
+                    <input type="email" class="form-control" id="school-email" placeholder="Enter your school email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="fullname" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="fullname" placeholder="Enter your full name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phonenumber" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phonenumber" placeholder="Enter your phone number" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Create a password" required>
+                </div>
+                <div class="mb-3">
+                    <label for="confirm-password" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password" required>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn" style="background-color: #F79420;">Register</button>
+                </div>
+            </form>
+    
+            <!-- Links to Login and Home Page -->
+            <div class="text-center mt-3">
+                <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+                <a href="{% url 'home' %}" class="btn btn-link">Return to Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</body>
+</html>

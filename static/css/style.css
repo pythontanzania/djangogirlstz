@@ -1,0 +1,81 @@
+/* General button styles */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Specific button styles */
+.navbar__btn {
+    background-color: #F79420;
+    color: white;
+}
+
+.navbar__btn:hover {
+    background-color: #e68a00; /* Darker shade for hover effect */
+}
+/* Navbar link color */
+.navbar .nav-link {
+    color: #F79420; /* Set text color to match button */
+}
+
+.navbar .nav-link:hover {
+    color: #e68a00; /* Change hover color (a slightly darker shade) */
+}
+
+.custom-heading {
+    width: 704px;            
+    height: 45px;               
+    font-family: 'Mulish', sans-serif; 
+    font-size: 48px;            
+    font-weight: 300;           
+    line-height: 80.32px;       
+    text-align: center;         
+    color: #F79420;  
+    margin: 0 auto;
+    margin-top: 50px;            
+    position: relative;         
+    
+}
+.para {
+    width: 604px;              
+    height: 65px;               
+    font-family: 'Mulish', sans-serif; 
+    font-size: 15px;            
+    font-weight: 200;           
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.large-font-bold {
+    font-weight: 900;
+    font-size: 64px;
+}
+
+.row > [class*='col-md-6'] {
+    margin-right: 0;
+    margin-left: -10px; 
+}
+
+.container {
+    display: flex;                /* Enable flexbox layout */
+    flex-direction: column;      /* Stack children vertically */
+    justify-content: center;      /* Center items vertically */
+    align-items: center;          /* Center items horizontally */
+    height: 100%;                 /* Ensure the container has a defined height */
+}
+
+
+
+/* Other button styles */
+.footer__btn {
+    background-color: #F79420;
+    color: white;
+    
+}
+
+.footer__btn:hover {
+    background-color: #e68a00;
+}
