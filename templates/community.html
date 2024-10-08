@@ -249,12 +249,22 @@
               <div class="col-md-4">
                 <h5 style="color: #F79420;">NEWSLETTER</h5>
                 <p>Sign Up For Our Newsletter To Get The Latest News In Your inbox</p>
-                <form>
-                  <div class="input-group mb-3">
-                    <input type="email" class="form-control" placeholder="Enter your email" aria-label="Recipient's email">
-                    <button class="btn" type="submit" style=" background-color: #F79420;" >Subscribe</button>
-                  </div>
+                <form method="post" action="{% url 'subscribe' %}">
+                    {% csrf_token %}
+                    <div class="input-group mb-3">
+                        <input type="email" name="email" class="form-control" placeholder="Enter your email" aria-label="Recipient's email" required>
+                        <button class="btn" type="submit" style="background-color: #F79420;">Subscribe</button>
+                    </div>
                 </form>
+                
+                {% if messages %}
+                  <div class="mt-3">
+                    {% for message in messages %}
+                      <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+                
                 <p style="font-size: small;">Your email is safe with us.We Dont Spam</p>
               </div>
             </div>
