@@ -2,10 +2,10 @@
 
 /* Navbar styling */
 .navbar {
-    background-color: transparent !important; /* Keep navbar transparent */
-    position: fixed; /* Fixed position */
-    width: 100%; /* Full width */
-    z-index: 1030; /* Ensure it’s above other content */
+    background-color: transparent !important; 
+    position: fixed; 
+    width: 100%;
+    z-index: 1030; 
 }
 
 .navbar-nav {
