@@ -17,41 +17,7 @@
 </head>
 
 <body class="bg-green-50">
-  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-    <div class="container-fluid">
-        <!-- Logo -->
-        <a class="navbar-brand" href="#">
-            <img src="{% static 'djangogirlstz/images/image 1.jpg' %}"  class="img-fluid" alt="Logo" width="150" height="40.8">
-        </a>
-        
-        <!-- Toggler button for mobile view -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'community' %}">Community</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'events' %}">Workshops</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'resources' %}">Resources</a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Button on the right -->
-        <div class="d-flex">
-          <a href="{% url 'register' %}" class="btn" style="background-color: #F79420; color: white;">Join Community</a>
-        </div>
-    </div>
-</nav>
-
-
+  {% include 'navbar.html' %}
     <p class="h5 custom-heading">Empowering Women in Tech</p>
 
     <p class="para">Step into a lively space where Django developers, creative minds, and tech enthusiasts come together. Whether you're an experienced coder or just starting out, you'll find a place here.</p>
