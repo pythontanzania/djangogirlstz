@@ -11,7 +11,7 @@ click==8.1.7
 cookiecutter==2.6.0
 cryptography==43.0.1
 defusedxml==0.7.1
-Django==5.1.1
+Django<5.0
 django-allauth==0.43.0
 django-appconf==1.0.6
 django-bootstrap-v5==1.0.11
