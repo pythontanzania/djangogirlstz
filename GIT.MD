@@ -16,7 +16,7 @@
 
   ```bash
   #good
-  $ git checkout -b laravel-passport-migration
+  $ git checkout -b django-passport-migration
 
   #bad - too vague
   $ git checkout -b fix-authentication
@@ -26,7 +26,7 @@
 
   ```bash
   #GitHub issue #10
-  $ git checkout -b laravel-passport-migration-10
+  $ git checkout -b django-passport-migration-10
   ```
 
 - Use _dashes_ to separate words.
@@ -133,19 +133,19 @@
 - Before you merge your branch, rebase onto the branch its going to be merged to.
 
   ```bash
-  [laravel-passport-migration] $ git fetch
-  [laravel-passport-migration] $ git rebase origin/master
-  [laravel-passport-migration] $ git checkout master
+  [django-passport-migration] $ git fetch
+  [django-passport-migration] $ git rebase origin/master
+  [django-passport-migration] $ git checkout master
 
-  [master] $ git merge laravel-passport-migration
+  [master] $ git merge django-passport-migration
   ```
 
 - If your branch contains more than one commit, do not merge with a fast-forward.
 
   ```bash
   #good
-  $ git merge --no-ff laravel-passport-migration
+  $ git merge --no-ff django-passport-migration
 
   #bad
-  $ git merge laravel-passport-migration
+  $ git merge django-passport-migration
   ```
