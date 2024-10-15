@@ -13,8 +13,8 @@
 </head>
 <body>
     <div class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container-fluid" style="background-color: #FFFFFF; top: 0; margin: 0; padding: 0; height: 40px;">
-            <a class="navbar-brand" href="#">
+        <div class="container-fluid" style="background-color: #FFFFFF; height: 70px; margin-top: 30px;">
+            <a class="navbar-brand" href="{% url 'home' %}">
                 <img src="{% static 'djangogirlstz/images/logoxbg.png' %}" class="img-fluid" alt="Logo" width="150" height="40.8">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,16 +23,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color: #FFFFFF;">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">  <!-- Use mx-auto here -->
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'community' %}">Community</a>
+                        <a class="nav-link" href="{% url 'community' %}" style="padding-right: 80px;">Community</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'events' %}">Workshops</a>
+                        <a class="nav-link" href="{% url 'events' %}" style="padding-right: 80px;">Workshops</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'events' %}">Blog</a>
+                        <a class="nav-link" href="{% url 'events' %}" style="padding-right: 80px;">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'resources' %}">Resources</a>
+                        <a class="nav-link" href="{% url 'resources' %}" style="padding-right: 80px;">Resources</a>
                     </li>
                 </ul>
                 <div class="d-flex">
