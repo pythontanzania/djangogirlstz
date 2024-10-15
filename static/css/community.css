@@ -2,7 +2,7 @@
 
 /* Navbar styling */
 .navbar {
-    background-color: transparent !important; 
+    background-color: transparent ; 
     position: fixed; 
     width: 100%;
     z-index: 1030; 
@@ -22,11 +22,8 @@
 
 
 
-
-
 .card {
     border-radius: 0; 
-    height: 85vh; 
     overflow: hidden;
     border: none;
     background-color: transparent; 
