@@ -56,7 +56,20 @@
     </section>
 
     <!-- Image Section -->
-    <div class="container ">
+    <div id="carouselExampleSlidesOnly" class="carousel slide d-block d-md-none" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'djangogirlstz/images/Right.png' %}" class="d-block w-100 img-fluid rounded" alt="Right Image" style="border-radius: 20px;">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'djangogirlstz/images/center.jpg' %}" class="d-block w-100 img-fluid rounded" alt="Center Image" style="border-radius: 20px;">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'djangogirlstz/images/Left.jpg' %}" class="d-block w-100 img-fluid rounded" alt="Left Image" style="border-radius: 20px;">
+        </div>
+      </div>
+    </div>
+    <div class="container d-none d-md-block ">
         <div class="row text-center">
             <div class="col-md-4">
                 <img src="{% static 'djangogirlstz/images/Right.png' %}" class="img-fluid rounded" alt="Right Image" style="border-radius: 20px;">
