@@ -14,6 +14,9 @@
     {% compress css %}
     <link rel="stylesheet" href="{% static 'css/community.css' %}" />
     {% endcompress %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
     <!--
@@ -30,10 +33,11 @@
             <img src="{% static 'djangogirlstz/images/Rectangle 45.png' %}" class="img-fluid" alt="">
             <div class="overlay"></div> 
             <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
-                <div class="text-center">
-                    <h1 class="community-heading">COMMUNITY</h1>
-                    <p class="community-paragraph">Join the  Django Girls Tanzania community  and Make a Difference.</p>
-                </div>
+                    <div class="col-md-4 text-center text-md-left">
+                        <h5 style="color: #F79420;">COMMUNITY</h5>
+                        <p class="community-paragraph">Join the  Django Girls Tanzania community  and Make a Difference.</p>
+                    </div>
+                
             </div>
         </div>
     </div>
@@ -99,18 +103,18 @@
                     </div>
                     <h5 class="card-title">Learning and Growth</h5>
                     <p class="card-text">Our community is a hub for continuous learning and personal growth. Through workshops, seminars, discussions, and other educational initiatives, you'll 
-                        have access to resources and support to enhance your skills, broaden your knowledge, and achieve your personal and professional goals.</p>
+                    have access to resources and support to enhance your skills, broaden your knowledge, and achieve your personal and professional goals.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="card-body text-center">
-        <h1 class="card-title" style="font-family: Mulish;font-weight: 900;font-size: 48px; border: 0; margin-top: 20px; margin-bottom: 0;">Local Chapters</h1>
-        <p class="card-text" style="font-family: Mulish;font-weight: 400;font-size: 20px; margin-top: 0;">Check out our upcoming workshops below</p>
+        <h1 class="card-title" style="font-family: Mulish;">Local Chapters</h1>
+        <p class="card-text" style="font-family: Mulish;">Check out our upcoming workshops below</p>
     </div>
     
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
         <div class="col">
             <div class="unique-card-style">
                 <img src="{% static 'djangogirlstz/images/Rectangle 108.png' %}" class="unique-card-img-top" alt="...">
