@@ -26,17 +26,43 @@
     -->
     
     <div class="container-fluid p-0"> 
-        <div class="custom-card text-bg-dark bg-success p-2 text-dark bg-opacity-10">
+        <!--<div class="custom-card text-bg-dark bg-success p-2 text-dark bg-opacity-10">
             <img src="{% static 'djangogirlstz/images/Rectangle 43(1).webp' %}" class="img-fluid" alt="">
-            <div class="overlay"></div> 
-            <div class="custom-card-img-overlay my-3 mx-5 flex-column justify-content-center align-items-center">
+            <div class="overlay"></div> -->
+            <div class="background-overlay d-flex flex-column justify-content-center align-items-center">
                 <div class="text-center">
-                    <h1 class="display-5" style="color: #F79420; font-weight: 500;">RESOURCES</h1>
+                    <h1 class="display-5 mt-5" style="color: #F79420; font-weight: 500;">RESOURCES</h1>
                     <p class="community-paragraph ">Join the  Django Girls Tanzania community  and Make a Difference.</p>
                 </div>
             </div>
         </div>
     </div>
+
+
+<style>
+         
+         
+    .background-overlay {
+        background-image: 
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url("{% static 'djangogirlstz/images/Rectangle 43(1).webp' %}");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;    
+    }
+
+ @media(max-width: 768px){
+    .background-overlay{
+        height: 20vh;
+        padding: 15px;
+    }
+ }   
+</style>
     
         
     
@@ -87,7 +113,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <div class="card">
                 <img src="{% static 'djangogirlstz/images/Rectangle 56.png' %}" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -98,7 +124,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <div class="card">
                 <img src="{% static 'djangogirlstz/images/Rectangle 56.png' %}" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -109,7 +135,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <div class="card">
                 <img src="{% static 'djangogirlstz/images/Rectangle 56.png' %}" class="card-img-top" alt="...">
                 <div class="card-body">
