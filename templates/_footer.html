@@ -3,7 +3,7 @@
 <div class="container mt-5">
     <footer class="row">
       <!-- Left Side: Logo and Paragraph -->
-      <div class="col-md-4">
+      <div class="col-md-4 col-sm-6 mb-3">
         <img src="{% static 'djangogirlstz/images/image 1.jpg' %}" class="img-fluid" alt="Logo" style="width: 150px; margin-bottom: 10px;">
         <p style="background-color: white; padding: 10px; border-radius: 5px; color: #333; font-size: 14px;">
           Django Girls Tanzania is a non-profit <br>organization and community that <br>empowers women by organizing free, <br>one-day programming workshops. We<br> provide tools, resources, and support <br> to help women enter the world of <br> technology with confidence.
@@ -11,7 +11,7 @@
       </div>
   
       <!-- Right Side: Columns -->
-      <div class="col-md-8">
+      <div class="col-md-8 col-sm-6 mb-3">
         <div class="row">
           <!-- First Column -->
           <div class="col-md-4">
@@ -27,7 +27,7 @@
           </div>
   
           <!-- Second Column -->
-          <div class="col-md-4">
+          <div class="col-md-4 col-sm-6 mb-3">
             <ul class="list-unstyled">
               <h5 style="color: #F79420; font-size: 18px;">RESOURCES</h5>
               <li style="color: #555; font-size: 16px;">TUTORIALS</li>
@@ -39,7 +39,7 @@
           </div>
   
           <!-- Third Column -->
-          <div class="col-md-4">
+          <div class="col-md-4 col-sm-12 mb-3">
             <h5 style="color: #F79420; font-size: 18px;">NEWSLETTER</h5>
             <p style="color: #555; font-size: 16px;">Sign Up For Our Newsletter To Get The Latest News In Your inbox</p>
             <form method="post" action="{% url 'subscribe' %}">
@@ -65,11 +65,11 @@
     </footer>
   </div>
 
-  <footer class="bg-white text-black text-center p-3 mt-4" style="border-top: 1px solid #ccc; display: flex; justify-content: space-between; align-items: center;">
-    <div style="flex: 1; text-align: left;">
+  <footer class="bg-white text-black text-center p-3 mt-4" style="color: #555; border-top: 1px solid #ccc; display: flex; justify-content: space-between; align-items: center;">
+    <div style="flex: 1; text-align: left; color: #555; ">
         <p style="margin: 0;">Made by Django Girls Community</p>
     </div>
-    <div style="flex: 1; text-align: center;">
+    <div style="flex: 1; text-align: center; color: #555;">
         <p>© 2024 Django Girls Community. All rights reserved.</p>
     </div>
     <div style="flex: 1; text-align: right;">
@@ -86,6 +86,8 @@
             <img src="{% static 'djangogirlstz/images/Facebook.png' %}" alt="Facebook" style="width: 30px; height: 30px;">
         </a>
     </div>
+    <style>
+
   </footer>
     
   <script src="{% static 'js/bootstrap.min.js' %}"></script>
