@@ -1,4 +1,4 @@
-{% load compress %} 
+{% load compress %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -9,344 +9,394 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Django Girls Tanzania</title>
     
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
-
     {% compress css %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     {% endcompress %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 
 <body class="bg-green-50">
-  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-    <div class="container-fluid">
-        <!-- Logo -->
-        <a class="navbar-brand" href="#">
-            <img src="{% static 'djangogirlstz/images/image 1.jpg' %}"  class="img-fluid" alt="Logo" width="150" height="40.8">
-        </a>
-        
-        <!-- Toggler button for mobile view -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'community' %}">Community</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'events' %}">Workshops</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'resources' %}">Resources</a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Button on the right -->
-        <div class="d-flex">
-          <a href="{% url 'register' %}" class="btn" style="background-color: #F79420; color: white;">Join Community</a>
-        </div>
-    </div>
-</nav>
-
-
-    <p class="h5 custom-heading">Empowering Women in Tech</p>
-
-    <p class="para">Step into a lively space where Django developers, creative minds, and tech enthusiasts come together. Whether you're an experienced coder or just starting out, you'll find a place here.</p>
-
-    <div class="text-center">
-        <img src="{% static 'djangogirlstz/images/Right.png' %}" class="img-fluid rounded" alt="..." width="397">
-        <img src="{% static 'djangogirlstz/images/center.jpg' %}" class="img-fluid rounded" alt="..." width="400">
-        <img src="{% static 'djangogirlstz/images/Left.jpg' %}" class="img-fluid rounded" alt="..." width="396">
-    </div>
-
-    <div class="container mt-5" style="background-color: #eeeeee;">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="quote-icon mb-2">
-              <img src="{% static 'djangogirlstz/images/apo1.svg' %}" class="img-fluid" alt="Quote Icon" style="width: 50px;">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'djangogirlstz/images/image 1.jpg' %}" class="img-fluid" alt="Logo" width="150" height="40.8">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'community' %}">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'events' %}">Workshops</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'resources' %}">Resources</a>
+                    </li>
+                </ul>
             </div>
-            <div style="position: relative;">
-            <h1 class="display-5 fw-bold">
-              Empowering Women Through Technology Workshop
-            </h1>
-            <img src="{% static 'djangogirlstz/images/apo2.svg' %}" class="img-fluid" alt="Quote Icon" style="width: 50px; position: absolute; bottom: 0; right: 0;">
-          </div>
-
-            <div class="blue-line" style="width: 60px; height: 4px; background-color: #007bff;"></div>
-            
-            <p class="mt-3">
-              We are making technology more approachable by creating resources designed with empathy. During each of our events, 30-60 women build their first web application using HTML, CSS, Python, and Django.
-            </p>
-            <div class="d-flex justify-content-between mt-4">
-              <div>
-                <h2 class="large-font-bold">5 +</h2>
-                <p>Communities</p>
-              </div>
-              <div>
-                <h2 class="large-font-bold">15 +</h2>
-                <p>Chapter Leads</p>
-              </div>
-              <div>                                                                                                                                                                                                                                     
-                <h2 class="large-font-bold">100 +</h2>
-                <p>Django Girls Tanzania</p>
-              </div>
+            <div class="d-flex">
+                <a href="{% url 'register' %}" class="btn" style="background-color: #F79420; color: white;">Join Community</a>
             </div>
-          </div>
-          <div class="col-md-6" style="position: relative;"> 
-            <img src="{% static 'djangogirlstz/images/Rectangle 14.png' %}" class="img-fluid rounded-3" alt="Workshop Image" 
-                 style="width: 505.4px; height: 448.98px; position: absolute; top: 15px; left: 100px;">
-          </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" > 
+        <div class="container text-center   ">
+            <h1 class="display-1 custom-heading" >Empowering Women in Tech</h1>
+            <p class="para">Step into a lively space where Django developers, creative minds, and tech <br>enthusiasts come together. Whether you're an experienced coder or just starting <br>out, you'll find a place here.</p>
+        </div>
+    </section>
+
+    <!-- Image Section -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide d-block d-md-none" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'djangogirlstz/images/r.webp' %}" class="d-block w-100 img-fluid rounded" alt="Right Image" style="border-radius: 20px;">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'djangogirlstz/images/c.webp' %}" class="d-block w-100 img-fluid rounded" alt="Center Image" style="border-radius: 20px;">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'djangogirlstz/images/l.webp' %}" class="d-block w-100 img-fluid rounded" alt="Left Image" style="border-radius: 20px;">
         </div>
       </div>
-      
-      <div class="container mt-5"> 
+    </div>
+    <div class="container d-none d-md-block ">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <img src="{% static 'djangogirlstz/images/Right.webp' %}" class="img-fluid rounded" alt="Right Image" style="border-radius: 20px;">
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'djangogirlstz/images/center.webp' %}" class="img-fluid rounded" alt="Center Image" style="border-radius: 20px;" >
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'djangogirlstz/images/Left.webp' %}" class="img-fluid rounded" alt="Left Image" style="border-radius: 20px;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote Section -->
+    <div class="container container-custom mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="quote-icon mb-2">
+                    <img src="{% static 'djangogirlstz/images/apo1.svg' %}" class="img-fluid" alt="Quote Icon" style="width: 50px;">
+                </div>
+                <div class="text-block">
+                    <h1 class="display-5 fw-bold">Empowering Women Through Technology Workshop</h1>
+                    <img src="{% static 'djangogirlstz/images/apo2.svg' %}" class="img-fluid" alt="Quote Icon" style="width: 50px;">
+                </div>
+                <div class="blue-line"></div>
+                <p class="mt-3">
+                    We are making technology more approachable by creating resources designed with empathy. During each of our events, 30-60 women build their first web application using HTML, CSS, Python, and Django.
+                </p>
+                <div class="d-flex justify-content-between mt-4">
+                    <div>
+                        <h2 class="large-font-bold">5 +</h2>
+                        <p>Communities</p>
+                    </div>
+                    <div>
+                        <h2 class="large-font-bold">15 +</h2>
+                        <p>Chapter Leads</p>
+                    </div>
+                    <div>
+                        <h2 class="large-font-bold">100 +</h2>
+                        <p>Django Girls Tanzania</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'djangogirlstz/images/Rectangle 14.webp' %}" class="img-fluid img-fluid-custom rounded-3" alt="Workshop Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <!-- Why Join Section -->
         <div class="row">
             <div class="col-md-5">
-              <h2 style="width: 394px; height: 120px; font-weight: 600; font-size: 36px; margin-bottom: 0;" >Why Join the Django Girls Community</h2> 
-                <p style="width: 394px; height: 80px; margin-top: 0;">Find answers to the most common questions about our workshops and organization.</p> 
+                <h2 class="h1 font-weight-bold" >Why Join the Django Girls Community</h2>
+                <p>Find answers to the most common questions about our workshops and organization.</p>
             </div>
-            <div class="col-md-7"> 
+            <div class="col-md-7">
                 <div class="row">
-                    <div class="col-md-6 mb-3"> 
-                        <div class="card border-0"> 
+                    <div class="col-md-6 mb-3">
+                        <div class="card border-0">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
-                                    <img src="{% static 'djangogirlstz/images/Teacher.png' %}" class="img-fluid" alt="Icon" style="width: 24px; height: 24px; margin-right: 8px;"> 
+                                    <img src="{% static 'djangogirlstz/images/Teacher.png' %}" class="img-fluid" alt="Icon" style="width: 24px; height: 24px; margin-right: 8px;">
                                     <h5 class="card-title">Mentorship session</h5>
                                 </div>
-                                <p class="card-text">Receive guidance and support from experienced mentors who are passionate about helping beginners succeed in their coding journey.</p> <!-- Card description -->
+                                <p class="card-text">Receive guidance and support from experienced mentors who are passionate about helping beginners succeed in their coding journey.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <div class="card border-0"> 
-                            <div class="card-body">
-                                <div class="d-flex align-items-center">
-                                    <img src="{% static 'djangogirlstz/images/ENvironment Care.png' %}" class="img-fluid" alt="Icon" style="width: 24px; height: 24px; margin-right: 8px;"> 
-                                    <h5 class="card-title">Supportive Environment</h5> 
-                                </div>
-                                <p class="card-text"> Learn in a welcoming and inclusive atmosphere where women are encouraged to explore technology without fear of judgment.</p> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row"> 
-                    <div class="col-md-6 mb-3"> 
                         <div class="card border-0">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
-                                    <img src="{% static 'djangogirlstz/images/Development Skill.png' %}" class="img-fluid" alt="Icon" style="width: 24px; height: 24px; margin-right: 8px;"> 
-                                    <h5 class="card-title">Skill Development</h5> 
+                                    <img src="{% static 'djangogirlstz/images/ENvironment Care.png' %}" class="img-fluid" alt="Icon" style="width: 24px; height: 24px; margin-right: 8px;">
+                                    <h5 class="card-title">Supportive Environment</h5>
                                 </div>
-                                <p class="card-text">Gain foundational knowledge in web development using Django and Python, two powerful and widely-used technologies.</p> 
+                                <p class="card-text">Learn in a welcoming and inclusive atmosphere where women are encouraged to explore technology without fear of judgment.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-3"> 
-                        <div class="card border-0"> 
+                    <div class="col-md-6 mb-3">
+                        <div class="card border-0">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
-                                    <img src="{% static 'djangogirlstz/images/Workshop.png' %}" class="img-fluid" alt="Icon" style="width: 24px; height: 24px; margin-right: 8px;"> 
+                                    <img src="{% static 'djangogirlstz/images/Development Skill.png' %}" class="img-fluid" alt="Icon" style="width: 24px; height: 24px; margin-right: 8px;">
+                                    <h5 class="card-title">Skill Development</h5>
+                                </div>
+                                <p class="card-text">Gain foundational knowledge in web development using Django and Python, two powerful and widely-used technologies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <img src="{% static 'djangogirlstz/images/Workshop.png' %}" class="img-fluid" alt="Icon" style="width: 24px; height: 24px; margin-right: 8px;">
                                     <h5 class="card-title">Free Workshops</h5>
                                 </div>
-                                <p class="card-text">Access to high-quality, free programming workshops designed to make learning to code accessible and enjoyable.</p> 
+                                <p class="card-text">Access to high-quality, free programming workshops designed to make learning to code accessible and enjoyable.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>   
+    </div>
+    
+        <!-- Who we are section -->
+<div class="container mt-5 mb-5">
+    <div class="card mb-3 border-0">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{% static 'djangogirlstz/images/Rectangle 62.webp' %}" class="img-fluid rounded-start" alt="..." style="max-width: 100%; height: auto;">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title text-start">Who we are</h5>
+                    <p class="card-text">Django Girls Tanzania is a non-profit organization and community that empowers women by organizing free, one-day programming workshops. We provide participants with mentorship, resources, and a supportive environment to learn the basics of web development using Django and Python.</p>
+                    <p>We are a volunteer-run organization with hundreds of people contributing to bring more amazing women into the world of technology.</p>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="card mb-3  border-0"  >
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="{% static 'djangogirlstz/images/Rectangle 62.png' %}" class="img-fluid rounded-start" alt="...">
+</div>
+
+<!-- Testimonials Section -->
+<div class="container mt-5 mb-5 text-center"> <!-- Added mb-5 for bottom margin -->
+    <h2 class="font-weight-bold" style="font-size: 36px;">Community Testimonials</h2>
+    <p>Listen to what our community members are saying</p>
+
+    <div class="row">
+        <div class="col-md-4 mb-4"> <!-- Added mb-4 for spacing between cards -->
+            <div class="card" style="background: #F7942099; border-radius: 10px;">
+                <div class="card-body text-center">
+                    <p class="card-text">Listen to what our community members are saying...</p>
+                    <img src="{% static 'djangogirlstz/images/Ellipse 3.png' %}" class="img-fluid" alt="Icon" style="width: 50px; height: 50px; margin: 10px auto;">
+                    <p class="card-title">Kemmie Mutagwaba</p>
+                    <p class="card-text">Software Developer</p>
+                </div>
+            </div>
         </div>
-        <div class="col-md-8">
-          <div class="card-body d-flex flex-column justify-content-center " style="height: 100%;">
-            <h5 class="card-title text-start ">Who we are</h5>
-            <p class="card-text">Django Girls Tanzania is a non-profit organization and community that empowers women by organizing free, one-day programming workshops. We provide participants with mentorship, resources, and a supportive environment to learn the basics of web development using Django and Python. We are a volunteer run organization with hundreds of people contributing to bring more amazing women into the world of technology. </p>
+        <div class="col-md-4 mb-4"> <!-- Added mb-4 for spacing between cards -->
+            <div class="card" style="background: #F7942099; border-radius: 10px;">
+                <div class="card-body text-center">
+                    <p class="card-text">Listen to what our community members are saying...</p>
+                    <img src="{% static 'djangogirlstz/images/Ellipse 3.png' %}" class="img-fluid" alt="Icon" style="width: 50px; height: 50px; margin: 10px auto;">
+                    <p class="card-title">Kemmie Mutagwaba</p>
+                    <p class="card-text">Django Girls Alumni</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4"> <!-- Added mb-4 for spacing between cards -->
+            <div class="card" style="background: #F7942099; border-radius: 10px;">
+                <div class="card-body text-center">
+                    <p class="card-text">Listen to what our community members are saying...</p>
+                    <img src="{% static 'djangogirlstz/images/Ellipse 3.png' %}" class="img-fluid" alt="Icon" style="width: 50px; height: 50px; margin: 10px auto;">
+                    <p class="card-title">Kemmie Mutagwaba</p>
+                    <p class="card-text">ICT Intern</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-2 mb-2"> 
+    <h2 class="text-center mb-1">Our Workshops</h2> 
+    <p class="text-center mt-1">Explore our upcoming workshops and join us to enhance your skills!</p> 
+</div>
+ 
+    <div class="row"> <!-- Changed card-group to row for better responsiveness -->
+      <div class="col-md-4"> <!-- Added col-md-4 for responsive columns -->
+        <div class="card" style="margin: 10px;">
+          <img src="{% static 'djangogirlstz/images/Rectangle 6.webp' %}" class="img-fluid card-img-top" alt="Rectangle 6"> <!-- Fixed img-fluid class name -->
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="rounded-pill border p-2" style="background-color: #f8f9fa;">Arusha</span> 
+              <span class="text-body-secondary">20th July 2024</span> 
+            </div>
+            <h5 class="card-title">Django Girls UI Workshop</h5> 
+            <p class="card-text">Learn the basics of coding in this introductory workshop.</p> 
+            <a href="#" class="card-link">Read more &gt;</a> 
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="card" style="margin: 10px;">
+          <img src="{% static 'djangogirlstz/images/Rectangle 6.webp' %}" class="img-fluid card-img-top" alt="Rectangle 6">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="rounded-pill border p-2" style="background-color: #f8f9fa;">Arusha</span> 
+              <span class="text-body-secondary">20th July 2024</span>
+            </div>
+            <h5 class="card-title">Django Girls UI Workshop</h5> 
+            <p class="card-text">Learn the basics of coding in this introductory workshop.</p> 
+            <a href="#" class="card-link">Read more &gt;</a> 
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4"> 
+        <div class="card" style="margin: 10px;">
+          <img src="{% static 'djangogirlstz/images/Rectangle 6.webp' %}" class="img-fluid card-img-top" alt="Rectangle 6">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="rounded-pill border p-2" style="background-color: #f8f9fa;">Arusha</span> 
+              <span class="text-body-secondary">20th July 2024</span> 
+            </div>
+            <h5 class="card-title">Django Girls UI Workshop</h5> 
+            <p class="card-text">Learn the basics of coding in this introductory workshop.</p> 
+            <a href="#" class="card-link">Read more &gt;</a> 
           </div>
         </div>
       </div>
     </div>
-    <div class="container" > 
-      <h2 style="font-size: 36px; width: 483px; height: 60px; margin-bottom: 0;">Community Testimonials</h2>
-      <p style="width: 483px; height: 60px; margin-top: 0;">Listen to what our community members are saying</p>
-  </div>
-
-  <div class="card-group">
-    <div class="card" style="background: #F7942099; width: 250px; height: 328px; border-radius: 10px 10px 10px 10px; margin:10px  ">
-      <div class="card-body text-center">
-        <p class="card-text">Listen to what our community members are sayingListen to what our community members are sayingListen to what our community members are saying</p>
-        <img src="{% static 'djangogirlstz/images/Ellipse 3.png' %}" class="img-fluid" alt="Icon" style="width: 50px; height: 50px; margin: 10px auto;"> 
-        <p class="card-title">Kemmie Mutagwaba</p>
-        <p class="card-text">Software Developer</p>
-      </div>
-    </div>
   
-    <div class="card" style="background: #F7942099; width: 250px; height: 328px; border-radius: 10px 10px 10px 10px; margin:10px">
-      <div class="card-body text-center">
-        <p class="card-text">Listen to what our community members are sayingListen to what our community members are sayingListen to what our community members are saying</p>
-        <img src="{% static 'djangogirlstz/images/Ellipse 3.png' %}" class="img-fluid" alt="Icon" style="width: 50px; height: 50px; margin: 10px auto;"> 
-        <p class="card-title">Kemmie Mutagwaba</p>
-        <p class="card-text">Django Girls Alumni</p>
-      </div>
+    <div class="text-center mt-4">
+      <a href="{% url 'dar' %}" class="btn" style="background-color: #F79420; color: white;">View all</a>
     </div>
+  </div>
   
-    <div class="card" style="background: #F7942099; width: 250px; height: 328px; border-radius: 10px 10px 10px 10px; margin:10px">
-      <div class="card-body text-center">
-        <p class="card-text">Listen to what our community members are sayingListen to what our community members are sayingListen to what our community members are saying</p>
-        <img src="{% static 'djangogirlstz/images/Ellipse 3.png' %}" class="img-fluid" alt="Icon" style="width: 50px; height: 50px; margin: 10px auto;">
-        <p class="card-title">Kemmie Mutagwaba</p> 
-        <p class="card-text">ICT Intern</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<div class="container mt-5"> <!-- New container -->
-  <h2 class="text-center">Our Workshops</h2> 
-  <p class="text-center">Explore our upcoming workshops and join us to enhance your skills!</p> 
-
-  <div class="card-group">
-    <div class="card" style="margin: 10px;">
-      <img src="{% static 'djangogirlstz/images/Rectangle 6.png' %}" class="img-fluidcard-img-top" alt="Rectangle 6">
-      <div class="card-body d-flex flex-column">
-        <div class="d-flex justify-content-between align-items-center">
-          <span class="rounded-pill border p-2" style="background-color: #f8f9fa;">Arusha</span> 
-          <span class="text-body-secondary">20th July 2024</span> 
-        </div>
-        <h5 class="card-title">Django Girls UI Workshop</h5> 
-        <p class="card-text">Learn the basics of coding in this introductory workshop.</p> 
-        <a href="#" class="card-link">Read more &gt;</a> 
-      </div>
-    </div>
-
-    <div class="card" style="margin: 10px;">
-      <img src="{% static 'djangogirlstz/images/Rectangle 6.png' %}" class="img-fluidcard-img-top" alt="Rectangle 6">
-      <div class="card-body d-flex flex-column">
-        <div class="d-flex justify-content-between align-items-center">
-          <span class="rounded-pill border p-2" style="background-color: #f8f9fa;">Arusha</span> 
-          <span class="text-body-secondary">20th July 2024</span>
-        </div>
-        <h5 class="card-title">Django Girls UI Workshop</h5> 
-        <p class="card-text">Learn the basics of coding in this introductory workshop.</p> 
-        <a href="#" class="card-link">Read more &gt;</a> 
-      </div>
-    </div>
-
-    <div class="card" style="margin: 10px;">
-      <img src="{% static 'djangogirlstz/images/Rectangle 6.png' %}" class="img-fluidcard-img-top" alt="Rectangle 6">
-      <div class="card-body d-flex flex-column">
-        <div class="d-flex justify-content-between align-items-center">
-          <span class="rounded-pill border p-2" style="background-color: #f8f9fa;">Arusha</span> 
-          <span class="text-body-secondary">20th July 2024</span> 
-        </div>
-        <h5 class="card-title">Django Girls UI Workshop</h5> 
-        <p class="card-text">Learn the basics of coding in this introductory workshop.</p> 
-        <a href="#" class="card-link">Read more &gt;</a> 
-      </div>
-    </div>
-  </div>
-
-  <div class="text-center mt-4">
-    <a href="{% url 'dar' %}" class="btn" style="background-color: #F79420; color: white;">View all</a>
-  </div>
-</div>
-
-<div class="card text-bg-dark" style="background: linear-gradient(180deg, #FFFFFF 0%, #F8A13B 87.72%, #F79420 100%); height: 400px; border: none; display: flex; justify-content: center; align-items: center; text-align: center;">
-  <div class="card-body" style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%;">
-    <h5 class="card-title" style="color: #000; width: 100%; max-width: 400px; margin: 0;">Join Us in Empowering Tanzanian Women through Technology!</h5>
-    <p class="card-text" style="color: #000; line-height: 1.5; margin: 10px 0; text-align: center;">
-      We are always looking for passionate individuals to join our community.<br>
-      Whether you are experienced in coding or have a desire to support women in technology,<br>
-      your contribution is valuable.
-    </p>
-    <a href="{% url 'register' %}" class="btn" style="background-color: #FFFFFF; color: #000;">Join the Cause</a>
-  </div>
-</div>
-<div class="container mt-5"> 
-  <footer class="row">
-    <!-- Left Side: Logo and Paragraph -->
-    <div class="col-md-4">
-      <img src="{% static 'djangogirlstz/images/image 1.jpg' %}" class="img-fluid" alt="Logo" style="width: 150px; margin-bottom: 10px;">
-      <p style="background-color: white; padding: 10px; border-radius: 5px; color: #333; font-size: 14px;">
-        Django Girls Tanzania is a non-profit <br>organization and community that <br>empowers women by organizing free, <br>one-day programming workshops.We<br> provide tools, resources, and support to help women enter the world of<br> technology with confidence.
+  <div class="card text-bg-dark" style="background: linear-gradient(180deg, #FFFFFF 0%, #F8A13B 87.72%, #F79420 100%); height: 400px; border: none; display: flex; justify-content: center; align-items: center; text-align: center;">
+    <div class="card-body" style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%;">
+      <h5 class="card-title" style="color: #000; width: 100%; max-width: 400px; margin: 0;">Join Us in Empowering Tanzanian Women through Technology!</h5>
+      <p class="card-text" style="color: #000; line-height: 1.5; margin: 10px 0; text-align: center;">
+        We are always looking for passionate individuals to join our community.<br>
+        Whether you are experienced in coding or have a desire to support women in technology,<br>
+        your contribution is valuable.
       </p>
+      <a href="{% url 'register' %}" class="btn" style="background-color: #FFFFFF; color: #000;">Join the Cause</a>
     </div>
-
-    <!-- Right Side: Columns -->
-    <div class="col-md-8">
-      <div class="row">
-        <!-- First Column -->
-        <div class="col-md-4">
-          <ul class="list-unstyled">
-            <h5 style="color: #F79420; font-size: 18px;">COMMUNITY</h5>
-            <li style="color: #555; font-size: 16px;">
-              <a href="{% url 'events' %}" style="color: #555; text-decoration: none;">EVENTS</a>
-            </li>
+  </div>
+  <div class="container mt-5">
+    <footer class="row">
+      <!-- Left Side: Logo and Paragraph -->
+      <div class="col-md-4">
+        <img src="{% static 'djangogirlstz/images/image 1.jpg' %}" class="img-fluid" alt="Logo" style="width: 150px; margin-bottom: 10px;">
+        <p style="background-color: white; padding: 10px; border-radius: 5px; color: #333; font-size: 14px;">
+          Django Girls Tanzania is a non-profit <br>organization and community that <br>empowers women by organizing free, <br>one-day programming workshops. We<br> provide tools, resources, and support <br> to help women enter the world of <br> technology with confidence.
+        </p>
+      </div>
+  
+      <!-- Right Side: Columns -->
+      <div class="col-md-8">
+        <div class="row">
+          <!-- First Column -->
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <h5 style="color: #F79420; font-size: 18px;">COMMUNITY</h5>
+              <li style="color: #555; font-size: 16px;">
+                <a href="{% url 'events' %}" style="color: #555; text-decoration: none;">EVENTS</a>
+              </li>
+              <li style="color: #555; font-size: 16px;">LOCAL CHAPTERS</li>
+              <li style="color: #555; font-size: 16px;">CODE OF CONDUCT</li>
+              <li style="color: #555; font-size: 16px;">COMMUNITY GUIDELINES</li>
+            </ul>
+          </div>
+  
+          <!-- Second Column -->
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <h5 style="color: #F79420; font-size: 18px;">RESOURCES</h5>
+              <li style="color: #555; font-size: 16px;">TUTORIALS</li>
+              <li style="color: #555; font-size: 16px;">ORGANIZER'S MANUAL</li>
+              <li style="color: #555; font-size: 16px;">TUTORIAL EXTENSIONS</li>
+              <li style="color: #555; font-size: 16px;">COACHING GUIDE</li>
+              <li style="color: #555; font-size: 16px;">GRAPHICS</li>
+            </ul>
+          </div>
+  
+          <!-- Third Column -->
+          <div class="col-md-4">
+            <h5 style="color: #F79420; font-size: 18px;">NEWSLETTER</h5>
+            <p style="color: #555; font-size: 16px;">Sign Up For Our Newsletter To Get The Latest News In Your inbox</p>
+            <form method="post" action="{% url 'subscribe' %}">
+              {% csrf_token %}
+              <div class="input-group mb-3">
+                  <input type="email" name="email" class="form-control" placeholder="Enter your email" aria-label="Recipient's email" required>
+                  <button class="btn" type="submit" style="background-color: #F79420;">Subscribe</button>
+              </div>
+            </form>
             
-            <li style="color: #555; font-size: 16px;">LOCAL CHAPTERS</li>
-            <li style="color: #555; font-size: 16px;">CODE OF CONDUCT</li>
-            <li style="color: #555; font-size: 16px;">COMMUNITY GUIDELINES</li>
-          </ul>
+            {% if messages %}
+              <div class="mt-3">
+                {% for message in messages %}
+                  <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+              </div>
+            {% endif %}
+            
+            <p style="font-size: 12px; color: #666;">Your email is safe with us. We Don't Spam</p>
+          </div>
         </div>
-
-        <!-- Second Column -->
-        <div class="col-md-4">
-          <ul class="list-unstyled">
-            <h5 style="color: #F79420; font-size: 18px;">RESOURCES</h5>
-            <li style="color: #555; font-size: 16px;">TUTORIALS</li>
-            <li style="color: #555; font-size: 16px;">ORGANIZER'S MANUAL</li>
-            <li style="color: #555; font-size: 16px;">TUTORIAL EXTENSIONS</li>
-            <li style="color: #555; font-size: 16px;">COACHING GUIDE</li>
-            <li style="color: #555; font-size: 16px;">GRAPHICS</li>
-          </ul>
+      </div>
+    </footer>
+  </div>
+    
+  <footer class="bg-white text-black text-center p-3 mt-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Side: Text -->
+        <div class="col-md-4 text-md-left text-center mb-2 mb-md-0">
+          <p style="margin: 0; color: #666; font-size: 16px;">Made by Django Girls Community</p>
         </div>
-
-        <!-- Third Column -->
-        <div class="col-md-4">
-          <h5 style="color: #F79420; font-size: 18px;">NEWSLETTER</h5>
-          <p style="color: #555; font-size: 16px;">Sign Up For Our Newsletter To Get The Latest News In Your inbox</p>
-          <form>
-            <div class="input-group mb-3">
-              <input type="email" class="form-control" placeholder="Enter your email" aria-label="Recipient's email">
-              <button class="btn" type="submit" style=" background-color: #F79420;" >Subscribe</button>
-            </div>
-          </form>
-          <p style="font-size: 12px; color: #666;">Your email is safe with us. We Don't Spam</p>
+        
+        <!-- Center: Copyright -->
+        <div class="col-md-4 text-center mb-2 mb-md-0">
+          <p style="color: #666; font-size: 14px;">© 2024 Django Girls Community. All rights reserved.</p>
+        </div>
+        
+        <!-- Right Side: Social Links -->
+        <div class="col-md-4 text-md-right text-center">
+          <a href="https://www.instagram.com" target="_blank">
+            <img src="{% static 'djangogirlstz/images/Instagram.png' %}" alt="Instagram" style="width: 30px; height: 30px;">
+          </a>
+          <a href="https://www.twitter.com" target="_blank">
+            <img src="{% static 'djangogirlstz/images/TwitterX.png' %}" alt="Twitter" style="width: 30px; height: 30px;">
+          </a>
+          <a href="https://www.linkedin.com" target="_blank">
+            <img src="{% static 'djangogirlstz/images/LinkedIn.png' %}" alt="LinkedIn" style="width: 30px; height: 30px;">
+          </a>
+          <a href="https://www.facebook.com" target="_blank">
+            <img src="{% static 'djangogirlstz/images/Facebook.png' %}" alt="Facebook" style="width: 30px; height: 30px;">
+          </a>
         </div>
       </div>
     </div>
   </footer>
-</div>
-
-<!-- Footer Section -->
-<footer class="bg-white text-black text-center p-3 mt-4" style="border-top: 1px solid #ccc; display: flex; justify-content: space-between; align-items: center; font-size: 14px;">
-  <div style="flex: 1; text-align: left;">
-      <p style="margin: 0; color: #666; font-size: 16px;">Made by Django Girls Community</p>
-  </div>
-  <div style="flex: 1; text-align: center;">
-      <p style="color: #666; font-size: 14px;">© 2024 Django Girls Community. All rights reserved.</p>
-  </div>
-  <div style="flex: 1; text-align: right;">
-      <a href="https://www.instagram.com" target="_blank">
-          <img src="{% static 'djangogirlstz/images/Instagram.png' %}" alt="Instagram" style="width: 30px; height: 30px;">
-      </a>
-      <a href="https://www.twitter.com" target="_blank">
-          <img src="{% static 'djangogirlstz/images/TwitterX.png' %}" alt="Twitter" style="width: 30px; height: 30px;">
-      </a>
-      <a href="https://www.linkedin.com" target="_blank">
-          <img src="{% static 'djangogirlstz/images/LinkedIn.png' %}" alt="LinkedIn" style="width: 30px; height: 30px;">
-      </a>
-      <a href="https://www.facebook.com" target="_blank">
-          <img src="{% static 'djangogirlstz/images/Facebook.png' %}" alt="Facebook" style="width: 30px; height: 30px;">
-      </a>
-  </div>
-</footer>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>
