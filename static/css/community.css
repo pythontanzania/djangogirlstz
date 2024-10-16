@@ -11,9 +11,6 @@ h5 {
     font-weight: 800;
 }
 
-p {
-    font-weight: 300;
-}
 
 a {
     text-decoration: none;
@@ -78,7 +75,7 @@ a:hover {
 
 
 .card {
-    border-radius: 0; 
+  /*  border-radius: 0; */
     border: none;
     background-color: transparent;
     background-size: cover;
@@ -152,7 +149,6 @@ a:hover {
     margin-bottom: 2rem;
     /*margin: 20px auto; */
     position: relative; 
-    z-index: 1; 
     margin-top: -100px;
     transition: all 0.3s ease-in-out;
 }
@@ -248,7 +244,7 @@ a:hover {
 .carousel-inner img {
     object-fit: cover;
     height: 400px;
-    border-radius: 10px;
+    border-radius: 10px ; 
     position: relative;
 }
 .carousel-item {

@@ -85,14 +85,16 @@ img.img-fluid-custom {
 /* Responsive Grid Layout for Images */
 @media (min-width: 768px) {
     .row .col-md-4 {
-        margin-bottom: 30px; 
+        margin-bottom: 20px;
+        padding-inline: 0; 
         
     }
 
-    .row.text-center img {
+   /* .row.text-center img {
         max-width: 100%; 
         height: auto;
-    }
+        
+    } */
     
    .row.text-center .col-md-4:nth-child(2) img {
         padding: 10px; 
