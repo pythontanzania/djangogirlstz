@@ -6,6 +6,11 @@
     z-index: 1030; /* Ensure it’s above other content */
 }
 
+body{
+    font-family: Mulish;
+    
+}
+
 .navbar-nav {
     justify-content: center; /* Center the nav items */
 }
@@ -92,4 +97,17 @@
 }
 
 
-
+.background-overlay {
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+        url("/static/djangogirlstz/images/hero_resources.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    background-repeat: no-repeat;   
+}
