@@ -1,81 +1,250 @@
 /* General button styles */
 .btn {
-    padding: 10px 20px;
+    padding: 10px 20px; 
     border: none;
-    border-radius: 5px;
+    border-radius: 5px; 
     cursor: pointer;
+    font-size: 1rem;
 }
 
 /* Specific button styles */
 .navbar__btn {
-    background-color: #F79420;
-    color: white;
+    background-color: #F79420; 
+    color: white; 
+    width: 274px;
+    height: 76px;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease; 
 }
 
 .navbar__btn:hover {
-    background-color: #e68a00; /* Darker shade for hover effect */
+    background-color: #e68a00; 
 }
+
 /* Navbar link color */
 .navbar .nav-link {
-    color: #F79420; /* Set text color to match button */
+    color: #F79420; 
+    font-size: 1.25rem;
+    line-height: 30.12px;
 }
 
 .navbar .nav-link:hover {
-    color: #e68a00; /* Change hover color (a slightly darker shade) */
+    color: #e68a00;
 }
 
-.custom-heading {
-    width: 704px;            
-    height: 45px;               
-    font-family: 'Mulish', sans-serif; 
-    font-size: 48px;            
-    font-weight: 300;           
-    line-height: 80.32px;       
-    text-align: center;         
-    color: #F79420;  
-    margin: 0 auto;
-    margin-top: 50px;            
-    position: relative;         
-    
+/* General Adjustments */
+body {
+    font-family: 'Mulish', sans-serif;
+    font-size: 1rem;
 }
-.para {
-    width: 604px;              
-    height: 65px;               
-    font-family: 'Mulish', sans-serif; 
-    font-size: 15px;            
-    font-weight: 200;           
+
+/*.hero {
+    padding: 100px 0; 
+}
+
+.container-custom {
+    margin-top: 100px;
+}
+*/
+.text-block h1 {
+    font-size: 2.25rem; 
+    color: #333;
+    line-height: 1.4;
+}
+
+img.img-fluid-custom {
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); 
+}
+
+/* Rounded Image Cards */
+.img-fluid {
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05); 
+}
+
+/* Flexbox for Quote Section */
+.d-flex.justify-content-between {
+    margin-top: 30px;
+}
+
+.d-flex div {
     text-align: center;
-    margin: 0 auto;
-    margin-top: 50px;
 }
 
 .large-font-bold {
-    font-weight: 900;
-    font-size: 64px;
+    font-size: 2.25rem;
+    color: #F79420;
 }
 
-.row > [class*='col-md-6'] {
-    margin-right: 0;
-    margin-left: -10px; 
+/* Responsive Grid Layout for Images */
+@media (min-width: 768px) {
+    .row .col-md-4 {
+        margin-bottom: 20px;
+        padding-inline: 0; 
+        
+    }
+
+   /* .row.text-center img {
+        max-width: 100%; 
+        height: auto;
+        
+    } */
+    
+   .row.text-center .col-md-4:nth-child(2) img {
+        padding: 10px; 
+        margin-top: 50px; 
+        margin-bottom: 10px; 
+    } 
 }
 
-.container {
-    display: flex;                /* Enable flexbox layout */
-    flex-direction: column;      /* Stack children vertically */
-    justify-content: center;      /* Center items vertically */
-    align-items: center;          /* Center items horizontally */
-    height: 100%;                 /* Ensure the container has a defined height */
+/* Footer Button Styling */
+.btn {
+    background-color: #F79420;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease; 
+}
+
+.btn:hover {
+    background-color: #d97706; 
+}
+
+/* Hero section heading */
+.custom-heading {
+    font-family: Mulish, sans-serif;
+    color: #F79420;
+    text-align: center;
+}
+
+/* Hero section paragraph */
+.para {
+    margin: 20px auto; 
+    font-family: Mulish, sans-serif;
+    font-size: 1.25rem;
+    line-height: 30px;
+    text-align: center;
+    max-width: 100%;
+}
+
+/* Container alignment */
+.container-custom {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    padding: 20px; 
+}
+
+/* Image styling */
+.img-fluid {
+    width: 100%; 
+    height: auto; 
+    border-radius: 20px;
 }
 
 
-
-/* Other button styles */
+/* Footer button */
 .footer__btn {
     background-color: #F79420;
     color: white;
-    
 }
 
 .footer__btn:hover {
     background-color: #e68a00;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+   
+    .para {
+        font-size: 1.125rem; 
+    }
+}
+
+/* Image section */
+.responsive-image {
+    width: 30%;
+    max-width: 500px; 
+    height: auto;
+    border-radius: 20px;
+    position: relative; 
+}
+
+.text-center {
+   margin-top: 150px;
+}
+
+.rounded {
+    border-radius: 20px;
+}
+
+/* Utility class */
+.large-font-bold {
+    font-size: 2.5rem;
+    
+}
+
+.blue-line {
+    width: 100%;
+    height: 3px;
+    background-color: #F79420;
+    margin: 20px 0;
+}
+
+/* Adjusting image section for proper alignment */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    gap: 20px; 
+}
+
+.image-container .responsive-image {
+    width: 30%; 
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .responsive-image {
+        width: 80%; 
+    }
+}
+
+/* Testimonial card enhancement */
+.card {
+    padding: 20px;
+
+}
+
+/* Enhancing card styles */
+.card {
+    border: 1px solid #e0e0e0; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+}
+
+/* Responsive card adjustments */
+@media (max-width: 768px) {
+    .card {
+        margin: 10px 0; 
+    }
 }
