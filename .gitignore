@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-__pycache__/
-=======
 # Byte-compiled / optimized / DLL files
 __pycache__/
 **/__pycache__
@@ -168,4 +165,3 @@ cython_debug/
 #.idea/
 
 .DS_Store
->>>>>>> ba9a7780417554f8ca804d92213cda6c80f53bfe
