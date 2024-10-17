@@ -248,3 +248,22 @@ img.img-fluid-custom {
         margin: 10px 0; 
     }
 }
+
+.icon {
+  display: inline-block;
+  color: #ff9900; 
+  font-size: 24px;
+  margin: 0 10px;
+  width: 40px; 
+  height: 40px; 
+  line-height: 40px; 
+  text-align: center; 
+  border-radius: 50%; 
+  transition: all 0.3s ease;
+}
+
+
+.icon:hover {
+    color: white; 
+    background-color:  #ff9900;
+}

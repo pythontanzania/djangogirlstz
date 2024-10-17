@@ -1,5 +1,9 @@
 name: Deploy Django Girls Website
-on: [push]
+on:
+  push:
+    branches:
+      - master
+
 jobs:
 
   build:
