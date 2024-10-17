@@ -1,22 +1,9 @@
+{% extends '_base.html' %}
+
 {% load compress %} 
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Django Girls Tanzania</title>
-    
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
-
-    {% compress css %}
-    <link rel="stylesheet" href="{% static 'css/resources.css' %}" />
-    {% endcompress %}
-</head>
-<body>
+{% block content %}
     
     <div class="container-fluid p-0"> 
             <div class="background-overlay d-flex flex-column justify-content-center align-items-center">
@@ -28,32 +15,7 @@
         </div>
     </div>
     
-    <div class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="{% static 'djangogirlstz/images/logoxbg.png' %}" class="img-fluid" alt="Logo" width="150" height="40.8">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">  <!-- Use mx-auto here -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'community' %}">Community</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'events' %}">Workshops</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'resources' %}">Resources</a>
-                    </li>
-                </ul>
-                <div class="d-flex">
-                    <a href="{% url 'register' %}" class="btn" style="background-color: #F79420; color: white;">Join Community</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <div class="card-body my-5 d-flex flex-column justify-content-center align-items-center text-center" >
         <h1 class="display-6" style="color: #F79420;">Explore Resources</h1>
@@ -99,10 +61,5 @@
             </div>
         </div>
     </div>
-    {% include '_footer.html' %}
 
- 
-
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-</body>
-</html>
+{% endblock content %}
