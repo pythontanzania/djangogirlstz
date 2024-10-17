@@ -4,10 +4,15 @@
     position: fixed; 
     width: 100%; 
     top: 0;
-    padding: 0;
+    padding:10px 0;
     margin: 0;
     height: 60px;
     z-index: 1030;
+}
+.navbar .container {
+    display: flex;
+    align-items: center;   /* Vertically center the items inside the navbar */
+    justify-content: space-between;  /* Spread out the logo, links, and button evenly */
 }
 .btn {
     padding: 10px 20px;
@@ -24,6 +29,9 @@
 
 .navbar__btn:hover {
     background-color: #e68a00; /* Darker shade for hover effect */
+}
+.navbar-nav .nav-link {
+    margin-right: 15px;  /* Adds space between the menu items */
 }
 /* Navbar link color */
 .navbar .nav-link {
@@ -70,6 +78,7 @@
 }
 
 .container {
+    max-width: 1200px;
     display: flex;                /* Enable flexbox layout */
     flex-direction: column;      /* Stack children vertically */
     justify-content: center;      /* Center items vertically */
