@@ -9,6 +9,8 @@
     <title>Django Girls Tanzania</title>
     
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
 
     {% compress css %}
     <link rel="stylesheet" href="{% static 'css/resources.css' %}" />
@@ -25,21 +27,14 @@
     -->
     
     <div class="container-fluid p-0"> 
-        <div class="card text-bg-dark">
-            <img src="{% static 'djangogirlstz/images/Rectangle 43.png' %}" class="img-fluid" alt="">
-            <div class="overlay"></div> 
-            <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+            <div class="background-overlay d-flex flex-column justify-content-center align-items-center">
                 <div class="text-center">
-                    <h1 class="community-heading">RESOURCES</h1>
-                    <p class="community-paragraph">Join the  Django Girls Tanzania community  and Make a Difference.</p>
+                    <h1 class="display-5  fw-bold mt-5" style="color: #F79420; font-weight: 500;">RESOURCES</h1>
+                    <p class=" ">Join the  Django Girls Tanzania community  and Make a Difference.</p>
                 </div>
             </div>
         </div>
     </div>
-    
-        
-    
-
     
     <div class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
@@ -68,14 +63,14 @@
         </div>
     </div>
 
-    <div class="card-body d-flex flex-column justify-content-center align-items-center text-center" style="height: 100vh;">
-        <h1 class="card-title" style="font-family: Mulish; font-weight: 900; font-size: 48px; margin-top: -500px; margin-bottom: 0;">Explore Resources</h1>
-        <p class="card-text" style="font-family: Mulish; font-weight: 400; font-size: 20px; margin-top: 0;">All the resources we've created are open sourced and managed by the community</p>
+    <div class="card-body my-5 d-flex flex-column justify-content-center align-items-center text-center" >
+        <h1 class="display-6" style="color: #F79420;">Explore Resources</h1>
+        <p class="card-text">All the resources we've created are open sourced and managed by the community</p>
     </div>
 
     <div class="container">
-        <div class="row row-cols-1 row-cols-md-4 g-4" style="margin-top: -500px;">
-            <div class="col">
+        <div class="row row-cols-1 row-cols-md-4 g-3">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <div class="card">
                 <img src="{% static 'djangogirlstz/images/Rectangle 56.png' %}" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -86,7 +81,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <div class="card">
                 <img src="{% static 'djangogirlstz/images/Rectangle 56.png' %}" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -97,7 +92,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <div class="card">
                 <img src="{% static 'djangogirlstz/images/Rectangle 56.png' %}" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -108,7 +103,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <div class="card">
                 <img src="{% static 'djangogirlstz/images/Rectangle 56.png' %}" class="card-img-top" alt="...">
                 <div class="card-body">
