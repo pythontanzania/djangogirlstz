@@ -1,4 +1,15 @@
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <link rel="stylesheet" href="{% static 'djangogirlstz/fontawesome/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> <!-- If you're using Bootstrap -->
+</head>
+<body>
+
 
 <div class="container mt-5">
     <footer class="row">
@@ -66,30 +77,31 @@
   </div>
 
 
-<div class="container">
-  <footer class="bg-white text-black text-center p-3 mt-4" style="color: #555; border-top: 1px solid #ccc; display: flex; justify-content: space-between; align-items: center;">
-    <div style="flex: 1; text-align: left; color: #555; ">
+  <div class="container">
+    <footer class="bg-white text-black text-center p-3 mt-4" style="color: #555; border-top: 1px solid #ccc; display: flex; justify-content: space-between; align-items: center;">
+     <div style="flex: 1; text-align: left; color: #555; ">
         <p style="margin: 0;">Made by Django Girls Community</p>
-    </div>
-    <div style="flex: 1; text-align: center; color: #555;">
+      </div>
+      <div style="flex: 1; text-align: center; color: #555;">
         <p>© 2024 Django Girls Community. All rights reserved.</p>
-    </div>
-    <div style="flex: 1; text-align: right;">
-        <a href="https://www.instagram.com" target="_blank">
-            <img src="{% static 'djangogirlstz/images/Instagram.png' %}" alt="Instagram" style="width: 30px; height: 30px;">
+      </div>
+      <div style="flex: 1; text-align: right;">
+        <a href="#" class="icon">
+          <i class="fab fa-instagram"></i>
         </a>
-        <a href="https://www.twitter.com" target="_blank">
-            <img src="{% static 'djangogirlstz/images/TwitterX.png' %}" alt="Twitter" style="width: 30px; height: 30px;">
+        <a href="#" class="icon">
+          <i class="fab fa-twitter"></i>
         </a>
-        <a href="https://www.linkedin.com" target="_blank">
-            <img src="{% static 'djangogirlstz/images/LinkedIn.png' %}" alt="LinkedIn" style="width: 30px; height: 30px;">
+        <a href="#" class="icon">
+          <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://www.facebook.com" target="_blank">
-            <img src="{% static 'djangogirlstz/images/Facebook.png' %}" alt="Facebook" style="width: 30px; height: 30px;">
+        <a href="#" class="icon">
+          <i class="fab fa-facebook"></i>
         </a>
-    </div>
-    <style>
+      </div>
+    </footer>
+  </div>  
 
-  </footer>
-</div>    
-  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>
