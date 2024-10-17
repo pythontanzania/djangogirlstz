@@ -248,3 +248,18 @@ img.img-fluid-custom {
         margin: 10px 0; 
     }
 }
+
+.icon {
+    color: #F79420; 
+    font-size: 24px; 
+    margin: 0 5px; 
+    transition: color 0.3s, background-color 0.3s; 
+    text-decoration: none;
+    padding: 10px; 
+    border-radius: 5px;
+}
+
+.icon:hover {
+    color: white; 
+    background-color: #F79420;
+}
