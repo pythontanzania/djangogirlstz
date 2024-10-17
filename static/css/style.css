@@ -250,16 +250,20 @@ img.img-fluid-custom {
 }
 
 .icon {
-    color: #F79420; 
-    font-size: 24px; 
-    margin: 0 5px; 
-    transition: color 0.3s, background-color 0.3s; 
-    text-decoration: none;
-    padding: 10px; 
-    border-radius: 5px;
+  display: inline-block;
+  color: #ff9900; 
+  font-size: 24px;
+  margin: 0 10px;
+  width: 40px; 
+  height: 40px; 
+  line-height: 40px; 
+  text-align: center; 
+  border-radius: 50%; 
+  transition: all 0.3s ease;
 }
+
 
 .icon:hover {
     color: white; 
-    background-color: #F79420;
+    background-color:  #ff9900;
 }
