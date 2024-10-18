@@ -486,7 +486,11 @@ body {
         font-size: 0.8rem;
     }
 }
+<<<<<<< HEAD
 
+=======
+/* events-page */
+>>>>>>> 2dd2aa4c (Updated CSS)
 .events-page .navbar {
     background-color: transparent !important; 
     position: fixed; 
@@ -590,8 +594,13 @@ body {
     line-height: 60.24px;
     text-align: left;
 }
+<<<<<<< HEAD
 
 /* Navbar styling */
+=======
+ 
+/* Resources-page */
+>>>>>>> 2dd2aa4c (Updated CSS)
 .resources-page .navbar {
     background-color: transparent !important; /* Keep navbar transparent */
     position: fixed; /* Fixed position */
@@ -841,36 +850,67 @@ body {
     font-weight: bold;
     margin-left: auto;
     margin-right: auto;
+<<<<<<< HEAD
     display: block; /* Center the button */
     width: 318px; /* Fixed width */
+=======
+    display: block; 
+    width: 318px; 
+>>>>>>> 2dd2aa4c (Updated CSS)
 }
 
 /* Custom image styling */
 .dar-page .custom-image {
+<<<<<<< HEAD
     height: 308px; /* Set the height of the images */
     object-fit: cover; /* Ensures the image covers the area without distortion */
     width: 100%; /* Make the images responsive */
     border-radius: 20px; /* Optional: Add rounded corners */
+=======
+    height: 308px;
+    object-fit: cover; 
+    width: 100%; 
+    border-radius: 20px; 
+>>>>>>> 2dd2aa4c (Updated CSS)
 }
 
 /* Ensure no unwanted borders or horizontal lines */
 .dar-page .container, .dar-page .row {
+<<<<<<< HEAD
     border: none; /* No borders */
     padding: 0; /* No padding */
     margin: 0; /* No margin */
+=======
+    border: none; 
+    padding: 0; 
+    margin: 0;
+>>>>>>> 2dd2aa4c (Updated CSS)
 }
 
 /* Profile picture styling */
 .dar-page .profile-pic {
+<<<<<<< HEAD
     width: 80px; /* Set the desired size */
     height: 80px; /* Set the desired size */
     margin-top: -40px; /* Adjust to move the image up */
     border: 5px solid white; /* Optional: white border for the profile picture */
+=======
+    width: 80px; 
+    height: 80px; 
+    margin-top: -40px; 
+    border: 5px solid white; 
+>>>>>>> 2dd2aa4c (Updated CSS)
 }
 
 /* Social icons container styling */
 .dar-page .social-icons {
     display: flex;
     justify-content: center;
+<<<<<<< HEAD
     margin-top: 10px; /* Space between text and icons */
 }
+=======
+    margin-top: 10px;
+}
+
+>>>>>>> 2dd2aa4c (Updated CSS)
