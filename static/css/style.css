@@ -105,12 +105,28 @@ body {
 
 .index-page .d-flex div {
     text-align: center;
+} 
+
+.parent-class{
+    position: relative;
+    left: 30px;
+    
+    
 }
 
+.child-class{
+    position: absolute;
+    
+
+}
 .index-page .large-font-bold {
     font-size: 2.25rem;
-    color: #F79420;
+    color: #0a0a0a;
+    font-weight: 900;
+    font-size: 64px;
 }
+
+
 
 /* Responsive Grid Layout for Images */
 @media (min-width: 768px) {
