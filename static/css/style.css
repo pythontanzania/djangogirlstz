@@ -103,22 +103,38 @@ body {
     margin-top: 30px;
 }
 
-.index-page .d-flex div {
-    text-align: center;
-} 
-
 .parent-class{
     position: relative;
-    left: 30px;
+  
     
     
 }
 
 .child-class{
     position: absolute;
-    
+    left: -45px;
 
 }
+
+
+.image-container {
+    position: relative;
+}
+
+.top-image {
+    /* position: absolute; */
+    z-index: 2;
+    border-radius: 8px;
+}
+
+.bottom-image {
+    transform: rotate(-10deg);
+    position: absolute;
+  
+    z-index: 1;
+    border-radius: 8px;
+}
+
 .index-page .large-font-bold {
     font-size: 2.25rem;
     color: #0a0a0a;
