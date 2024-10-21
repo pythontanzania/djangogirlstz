@@ -4,6 +4,8 @@
 
 {% block content %}
 
+<div class="dar-page">
+
     
     <div class="container-fluid p-0"> 
         <div class="card text-bg-dark">
@@ -13,33 +15,6 @@
                 <div class="text-center">
                     <h1 class="community-heading">COMMUNITY/Dar</h1>
                     <p class="community-paragraph">Join the  Django Girls Tanzania community and Make a Difference.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="{% static 'djangogirlstz/images/logoxbg.png' %}" class="img-fluid" alt="Logo" width="150" height="40.8">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'community' %}">Community</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'events' %}">Workshops</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'resources' %}">Resources</a>
-                    </li>
-                </ul>
-                <div class="d-flex">
-                    <a href="{% url 'register' %}" class="btn" style="background-color: #F79420; color: white;">Join Community</a>
                 </div>
             </div>
         </div>
@@ -189,10 +164,13 @@
           </p>
           <a href="{% url 'register' %}" class="btn" style="background-color: #FFFFFF; color: #000;">Join the Cause</a>
         </div>
+      </div>
     </div>
-</div>
-      
+</div>    
 {% endblock content %}
+      
+      
+
     
     
 
