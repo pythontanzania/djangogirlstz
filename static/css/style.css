@@ -914,7 +914,7 @@ canvas {
   }
 }
 .homepage-hero {
-  height: 60vh;
+  height: 90vh;
   position: relative;
   overflow-y: hidden;
   overflow-x: hidden;
@@ -942,9 +942,83 @@ canvas {
 
 .homepage-hero-title {
   position: absolute;
-  top: 35%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
+}
+
+.homepage-hero-carousel {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+}
+
+@media screen and (max-width: 375px) {
+  .homepage-hero {
+    height: 100vh;
+  }
+  .homepage-hero-title {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+
+  .homepage-hero-carousel {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .homepage-hero {
+    height: 80vh;
+  }
+  .homepage-hero-title {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+
+  .homepage-hero-carousel {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .homepage-hero {
+    height: 70vh;
+  }
+  .homepage-hero-title {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+
+  .homepage-hero-carousel {
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+  }
 }
