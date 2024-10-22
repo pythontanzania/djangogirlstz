@@ -972,6 +972,52 @@ canvas {
 }
 
 /* Larger phones */
+@media screen and (max-width: 768px) {
+  .homepage-hero {
+    height: 80vh;
+  }
+  .homepage-hero-title {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+
+  .homepage-hero-carousel {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+  }
+}
+
+/* Larger phones */
+@media screen and (max-width: 576px) {
+  .homepage-hero {
+    height: 80vh;
+  }
+  .homepage-hero-title {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+
+  .homepage-hero-carousel {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+  }
+}
+
+/* Larger phones */
 @media screen and (max-width: 430px) {
   .homepage-hero {
     height: 80vh;
