@@ -918,14 +918,6 @@ canvas {
   position: relative;
   overflow-y: hidden;
   overflow-x: hidden;
-
-  /* Prevent scrolling */
-  overscroll-behavior: none;
-  touch-action: none;
-
-  /* Hide scrollbars but keep functionality */
-  scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 
 /* Hide WebKit/Chrome scrollbars */
@@ -957,6 +949,52 @@ canvas {
   width: 90vw;
 }
 
+@media screen and (max-width: 1024px) {
+  .homepage-hero {
+    height: 70vh;
+  }
+  .homepage-hero-title {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+
+  .homepage-hero-carousel {
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+  }
+}
+
+/* Larger phones */
+@media screen and (max-width: 430px) {
+  .homepage-hero {
+    height: 80vh;
+  }
+  .homepage-hero-title {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+
+  .homepage-hero-carousel {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+  }
+}
+
+/* Smaller phones */
 @media screen and (max-width: 375px) {
   .homepage-hero {
     height: 100vh;
@@ -979,46 +1017,9 @@ canvas {
   }
 }
 
-@media screen and (max-width: 414px) {
+/* Add this to ensure proper mobile rendering */
+@media screen and (max-width: 768px) {
   .homepage-hero {
-    height: 80vh;
-  }
-  .homepage-hero-title {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-  }
-
-  .homepage-hero-carousel {
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90vw;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .homepage-hero {
-    height: 70vh;
-  }
-  .homepage-hero-title {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-  }
-
-  .homepage-hero-carousel {
-    position: absolute;
-    top: 72%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100vw;
+    min-height: -webkit-fill-available;
   }
 }
