@@ -269,12 +269,6 @@ body {
 }
 
 
-/* .h1-class{
-    font-weight: 900px;
-    font-size: 48px;
-} */
-
-
 /* community */
 
 /* General Body Styles */
@@ -382,7 +376,7 @@ body {
 }
 
 .community-page .custom-card {
-    background-color: #eeeeee; 
+    background-color: #ffffff;  
     border-radius: 20px; 
     display: flex;
     flex-direction: column;
