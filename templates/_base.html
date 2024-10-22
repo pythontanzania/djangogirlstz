@@ -1,13 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+  {% include 'partials/header.html' %} {% include 'partials/navigation.html' %}
 
-{% include 'partials/header.html' %}
-
-{% include 'partials/navigation.html' %}
-
-<body>
+  <body>
     {% block content %}{% endblock %}
-</body>
+  </body>
 
-{% include 'partials/footer.html' %}
+  {% include 'partials/footer.html' %}
+  <script>
+    window.onload = function () {
+      var lyric =
+        "%} jinja if True  the realm of Python where the code flows free Django sisters rising pip install equality, import respect Building features others From frontend to backend, we persist and grow Teaching others everything we know %} {% if boolean model field CharField IntegerField ForeignKey {{ variable }} extends join women code text Tech In the realm of Python where the code flows free Django sisters rising, tech is where we will be Breaking through barriers, one commit at a time Writing clean code that is simply sublime";
+      var words = {};
+      var words_attr = [];
+      var isResizing = false;
+      var resizeTimeout;
+      var devicePixelRatio = window.devicePixelRatio || 1;
+
+      function string_handle(str) {
+        var split_str = str.split(" ");
+        var word_array = [];
+        var word_count = [];
+
+        for (var i = 0; i < split_str.length; i++) {
+          var check = true;
+          for (var j = 0; j <= word_array.length; j++) {
+            if (split_str[i] == word_array[j]) {
+              word_count[j]++;
+              check = false;
+              break;
+            }
+          }
+          if (check) {
+            word_array.push(split_str[i]);
+            word_count.push(1);
+          }
+        }
+
+        for (var i = 0; i < word_array.length; i++) {
+          words[word_array[i]] = word_count[i];
+        }
+        return words;
+      }
+
+      function initCanvas() {
+        var canvas = document.getElementById("c");
+        // Scale canvas for retina/high DPI displays
+        canvas.width = window.innerWidth * devicePixelRatio;
+        canvas.height = window.innerHeight * devicePixelRatio;
+        canvas.style.width = window.innerWidth + "px";
+        canvas.style.height = window.innerHeight + "px";
+        return canvas;
+      }
+
+      function adjustFontSizeForMobile() {
+        var baseSize = window.innerWidth < 768 ? 20 : 40; // Smaller base size for mobile
+        return function (count) {
+          return count * baseSize + "px roboto";
+        };
+      }
+
+      string_handle(lyric);
+      var canvas = initCanvas();
+      var getFontSize = adjustFontSizeForMobile();
+
+      if (canvas.getContext) {
+        var c = canvas.getContext("2d"),
+          w = canvas.width,
+          h = canvas.height;
+
+        // Scale context for retina displays
+        c.scale(devicePixelRatio, devicePixelRatio);
+
+        c.strokeStyle = "red";
+        c.fillStyle = "#f0f0f0";
+        c.lineWidth = window.innerWidth < 768 ? 2 : 5; // Thinner lines for mobile
+
+        // Word constructor with smooth transition support
+        function Word(key) {
+          this.text = key;
+          this.x = Math.random() * window.innerWidth;
+          this.y = Math.random() * window.innerHeight;
+          this.font = getFontSize(words[key]);
+          this.speed = words[key] * (window.innerWidth < 768 ? 0.5 : 1); // Slower on mobile
+          this.targetX = this.x;
+          this.targetY = this.y;
+        }
+
+        // Create word objects
+        for (var key in words) {
+          words_attr.push(new Word(key));
+        }
+
+        function animation() {
+          for (var i = 0; i < words_attr.length; i++) {
+            c.font = words_attr[i].font;
+
+            // Smooth position transition during resize
+            if (isResizing) {
+              words_attr[i].x +=
+                (words_attr[i].targetX - words_attr[i].x) * 0.1;
+              words_attr[i].y +=
+                (words_attr[i].targetY - words_attr[i].y) * 0.1;
+            }
+
+            c.fillText(words_attr[i].text, words_attr[i].x, words_attr[i].y);
+            words_attr[i].width = c.measureText(words_attr[i].text).width;
+            c.stroke();
+          }
+          move();
+        }
+
+        function move() {
+          if (!isResizing) {
+            for (var i = 0; i < words_attr.length; i++) {
+              if (words_attr[i].x > window.innerWidth) {
+                words_attr[i].x = -words_attr[i].width;
+                words_attr[i].y = Math.random() * window.innerHeight;
+              } else {
+                words_attr[i].x += words_attr[i].speed;
+              }
+            }
+          }
+        }
+
+        // Improved resize handler with debouncing and smooth transitions
+        window.addEventListener("resize", function () {
+          if (resizeTimeout) clearTimeout(resizeTimeout);
+
+          isResizing = true;
+
+          // Immediately adjust canvas size
+          canvas.width = window.innerWidth * devicePixelRatio;
+          canvas.height = window.innerHeight * devicePixelRatio;
+          canvas.style.width = window.innerWidth + "px";
+          canvas.style.height = window.innerHeight + "px";
+
+          // Scale context for retina displays
+          c.scale(devicePixelRatio, devicePixelRatio);
+          c.strokeStyle = "red";
+          c.fillStyle = "#f0f0f0";
+          c.lineWidth = window.innerWidth < 768 ? 2 : 5;
+
+          // Update word positions and properties
+          words_attr.forEach(function (word) {
+            word.targetX = Math.random() * window.innerWidth;
+            word.targetY = Math.random() * window.innerHeight;
+            word.font = getFontSize(words[word.text]);
+            word.speed = words[word.text] * (window.innerWidth < 768 ? 0.5 : 1);
+          });
+
+          // Reset resize state after transition
+          resizeTimeout = setTimeout(function () {
+            isResizing = false;
+          }, 300);
+        });
+
+        // Touch event handling for mobile
+        let touchStartX, touchStartY;
+
+        canvas.addEventListener("touchstart", function (e) {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+          e.preventDefault();
+        });
+
+        canvas.addEventListener("touchmove", function (e) {
+          e.preventDefault();
+        });
+
+        // Performance optimization for mobile
+        const fps = window.innerWidth < 768 ? 30 : 24; // Higher FPS for mobile
+        const interval = 1000 / fps;
+
+        // Animation loop with timing optimization
+        let lastTime = 0;
+        function animationLoop(currentTime) {
+          if (!lastTime) lastTime = currentTime;
+
+          const deltaTime = currentTime - lastTime;
+
+          if (deltaTime >= interval) {
+            c.clearRect(0, 0, window.innerWidth, window.innerHeight);
+            animation();
+            lastTime = currentTime;
+          }
+
+          requestAnimationFrame(animationLoop);
+        }
+
+        requestAnimationFrame(animationLoop);
+      }
+
+      //const hero = document.querySelector(".homepage-hero");
+      //
+      //  hero.addEventListener("wheel", (e) => e.preventDefault(), {
+      //     passive: false,
+      //   });
+      //   hero.addEventListener("touchmove", (e) => e.preventDefault(), {
+      //      passive: false,
+      //   });
+      //
+      //   hero.addEventListener("scroll", () => {
+      //    hero.scrollTop = 0;
+      //  });
+    };
+  </script>
 </html>
