@@ -155,16 +155,18 @@
         </div>
         
         <!-- Who we are section -->
-        <div class="container mt-5 mb-5">
-            <div class="card mb-3 border-0">
+
+        <div class="container-fluid mt-5 mb-5">
+            <div class="mb-3 border-0">
                 <div class="row g-0">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <img src="{% static 'djangogirlstz/images/Rectangle 62.webp' %}" class="img-fluid rounded-start" alt="..." style="max-width: 100%; height: auto;">
                     </div>
-                    <div class="col-md-8">
-                        <div class="card-body d-flex align-self-center  flex-column justify-content-center">
-                            <h5 class="h3 d-flex align-items-center text-start">Who we are</h5>
-                            <p class="card-text d-flex align-self-center">Django Girls Tanzania is a non-profit organization and community that empowers women by organizing free, one-day programming workshops. We provide participants with mentorship, resources, and a supportive environment to learn the basics of web development using Django and Python.</p>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <div class="card-body mx-5 my-5">
+                            <h5 class="fw-bold display-6 pb-3">Who we are</h5>
+                            <p class="card-text">Django Girls Tanzania is a community that empowers women by organizing free, one-day programming workshops. We provide participants with mentorship, resources, and a supportive environment to learn the basics of web development using Django and Python.</p>
+
                             <p>We are a volunteer-run organization with hundreds of people contributing to bring more amazing women into the world of technology.</p>
                         </div>
                     </div>
@@ -172,12 +174,14 @@
             </div>
         </div>
         
-        <!-- Testimonials Section -->
-        {% comment %} <div class="container mt-5 mb-5 text-center"> <!-- Added mb-5 for bottom margin -->
-        <h2 class="font-weight-bold" style="font-size: 36px;">Community Testimonials</h2>
-        <p>Listen to what our community members are saying</p>
-        
-        <div class="row">
+
+
+<!-- Testimonials Section -->
+{% comment %} <div class="container mt-5 mb-5 text-center"> <!-- Added mb-5 for bottom margin -->
+    <h2 class="font-weight-bold" style="font-size: 36px;">Community Testimonials</h2>
+    <p>Listen to what our community members are saying</p>
+
+    <div class="row">
         <div class="col-md-4 mb-4"> <!-- Added mb-4 for spacing between cards -->
         <div class="card" style="background: #F7942099; border-radius: 10px;">
         <div class="card-body text-center">
