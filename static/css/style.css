@@ -141,19 +141,22 @@ body {
 
 /* Hero section heading */
 .index-page .custom-heading {
-    font-family: Mulish, sans-serif;
-    color: #F79420;
-    text-align: center;
+  font-family: Mulish, sans-serif;
+  color: #f79420;
+  text-align: center;
+  
 }
 
 /* Hero section paragraph */
 .index-page .para {
-    margin: 20px auto; 
-    font-family: Mulish, sans-serif;
-    font-size: 1.25rem;
-    line-height: 30px;
-    text-align: center;
-    max-width: 100%;
+  margin: 20px auto;
+  margin-bottom: 10%;
+  font-family: Mulish, sans-serif;
+  font-size: 1.25rem;
+  line-height: 30px;
+  text-align: center;
+  max-width: 100%;
+  color: #000;
 }
 
 /* Container alignment */
