@@ -614,6 +614,18 @@ body {
   text-align: left;
 }
 
+<<<<<<< Updated upstream
+=======
+.events-page .custom-line{
+    background-color: black;
+    width: 100%;
+    border: none;
+    height: 2px;
+    
+    
+}
+ 
+>>>>>>> Stashed changes
 /* Resources-page */
 .resources-page .navbar {
   background-color: transparent !important; /* Keep navbar transparent */
