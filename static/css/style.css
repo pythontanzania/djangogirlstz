@@ -171,6 +171,7 @@ body {
 /* Hero section paragraph */
 .index-page .para {
   margin: 20px auto;
+  margin-bottom: 10%;
   font-family: Mulish, sans-serif;
   font-size: 1.25rem;
   line-height: 30px;
@@ -258,8 +259,8 @@ body {
   transform: translateY(-5px);
 }
 
-.who{
-    margin-top: 50px;
+.who {
+  margin-top: 50px;
 }
 
 /* community */
@@ -510,11 +511,18 @@ body {
   }
 }
 /* events-page */
-.events-page .navbar {
-  background-color: transparent !important;
-  position: fixed;
+.events-page .background-overlay {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/djangogirlstz/images/Rectangle 32.png");
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
   width: 100%;
-  z-index: 1030;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-repeat: no-repeat;
 }
 
 .events-page .navbar-nav {
@@ -614,39 +622,25 @@ body {
   text-align: left;
 }
 
-
 .events-page .accordion-button {
-    /* background-color: #f79420 !important;  */
-    /* color: white; */
-    
-  }
-
-  .accordion-button:not(.collapsed) {
-    color: white;
-    background-color: #f79420;
-    box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
-  }
-.events-page .accordion-button:focus{
-    box-shadow: none;
-    outline: none;
-} 
-
-
-.accordion-button::after{
-    color: white;
+  /* background-color: #f79420 !important;  */
+  /* color: white; */
 }
 
- 
- 
+.accordion-button:not(.collapsed) {
+  color: white;
+  background-color: #f79420;
+  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0
+    var(--bs-accordion-border-color);
+}
+.events-page .accordion-button:focus {
+  box-shadow: none;
+  outline: none;
+}
 
-
-
-
-
-
-
-
-
+.accordion-button::after {
+  color: white;
+}
 
 /* Resources-page */
 .resources-page .navbar {
