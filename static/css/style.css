@@ -492,7 +492,7 @@ body {
 /* events-page */
 .events-page .background-overlay {
     background-image: 
-        linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
         url("/static/djangogirlstz/images/Rectangle 32.png");
     background-size: cover;
     background-position: center;
