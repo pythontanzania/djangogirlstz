@@ -293,6 +293,7 @@ body {
   color: #f79420;
 }
 
+/* Buttons */
 .community-page .btn {
   transition: all 0.3s ease-in-out;
 }
@@ -301,6 +302,7 @@ body {
   opacity: 0.9;
 }
 
+/* Navbar for Mobile View */
 @media (max-width: 768px) {
   .community-page .navbar-collapse {
     background-color: #000;
@@ -313,67 +315,7 @@ body {
   }
 }
 
-.community-page .card {
-  border: none;
-  background-color: transparent;
-  background-size: cover;
-  background-position: center;
-  padding: relative;
-}
-
-.community-page .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.community-page .card-img-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 100%;
-}
-
-.community-page .community-paragraph {
-  color: white;
-  font-size: 1.1rem;
-  text-align: left;
-  margin-top: 1rem;
-}
-
-@media (max-width: 576px) {
-  .community-page .community-paragraph {
-    text-align: center;
-  }
-}
-
-.community-page .community-heading {
-  color: #f79420;
-  font-size: 3rem;
-  font-family: "Mulish", sans-serif;
-}
-
-@media (max-width: 768px) {
-  .community-page .community-heading {
-    font-size: 1.75rem;
-  }
-}
-
-.community-page .custom-cards-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 0 20px;
-  width: 100%;
-}
-
+/* Custom Card Styles */
 .community-page .custom-card {
   background-color: #ffffff;
   border-radius: 20px;
@@ -382,28 +324,14 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-bottom: 2rem;
-  margin-left: 20px;
-  position: relative;
+  padding: 2rem;
   margin-top: -100px;
   transition: all 0.3s ease-in-out;
-}
-
-@media (max-width: 768px) {
-  .community-page .custom-card {
-    padding: 10px;
-    margin: 20px auto;
-  }
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .community-page .custom-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
-}
-
-.community-page .custom-card h5 {
-  color: #f79420;
-  font-weight: 700;
 }
 
 .community-page .icon-img {
@@ -412,9 +340,10 @@ body {
 }
 
 .community-page .card-title {
-  font-family: "Mulish", sans-serif;
+  color: #f79420;
+  font-weight: 700;
   font-size: 1.5rem;
-  margin-bottom: 10px;
+  margin-top: 1rem;
 }
 
 .community-page .card-text {
@@ -425,13 +354,11 @@ body {
 
 
 /* Carousel Container */
-
-/* Left Card Styling */
 .community-page .left-card .info_card {
   background-color: #f8f9fa; 
-  padding: 100px 80px;
+  padding: 150px 80px;
   border-radius: 8px;
-  width: 100%;
+  width: 80%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   position: relative;
   z-index: 1;
@@ -470,7 +397,7 @@ body {
 /* Carousel Styling */
 .community-page .carousel-container {
   position: relative;
-  margin-left: -100px; 
+  margin-left: -200px; 
   z-index: 2;
 }
 /* Media Query for Small Devices */
@@ -483,7 +410,7 @@ body {
 .community-page .carousel-inner img {
   /* max-height: 500px;  */
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 2px;
 }
 @media (max-width: 768px) {
   .community-page .carousel-inner img {
@@ -493,7 +420,7 @@ body {
 
 .community-page .carousel-indicators {
   position: static;
-  margin-top: 10px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
 }
