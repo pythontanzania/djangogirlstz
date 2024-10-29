@@ -324,10 +324,20 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
-  margin-top: -100px;
+  padding: 10px;
+  margin: -100px 10px 10px;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .community-page .card-container {
+    flex-direction: column; 
+  }
+  
+  .community-page .custom-card {
+    margin: 10px 0;
+  }
 }
 
 .community-page .custom-card:hover {
@@ -356,7 +366,7 @@ body {
 /* Carousel Container */
 .community-page .left-card .info_card {
   background-color: #f8f9fa; 
-  padding: 150px 80px;
+  padding: 100px 80px;
   border-radius: 8px;
   width: 80%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
@@ -411,6 +421,8 @@ body {
   /* max-height: 500px;  */
   object-fit: cover;
   border-radius: 2px;
+  width: 100%;
+  height:auto;
 }
 @media (max-width: 768px) {
   .community-page .carousel-inner img {
