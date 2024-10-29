@@ -37,6 +37,14 @@ def events(request):
             form.save()
     return render(request, 'events.html', {'form': form})
 
+# def about(request):
+#     form = SubscriptionForm()
+#     if request.method == 'POST':
+#         form = SubscriptionForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#     return render(request, 'about.html', {'form': form})
+
 def dar(request):
     form = SubscriptionForm()  
     if request.method == 'POST':
@@ -81,3 +89,77 @@ def subscribe(request):
             form.save()
     return redirect('home')  
 
+def about(request):
+    team_members = [
+        {
+            'name': 'Catherine',
+            'role': 'Developer',
+            'bio': 'Short bio about Catherine. A fun fact!',
+            'image': 'djangogirlstz/images/c-catherinerose.png'
+        },
+        {
+            'name': 'Noah',
+            'role': 'Designer',
+            'bio': 'Short bio about Noah. A fun fact!',
+            'image': 'djangogirlstz/images/c-noah.png'
+        },
+        {
+            'name': 'Lupyana',
+            'role': 'Project Manager',
+            'bio': 'Short bio about Lupyana. A fun fact!',
+            'image': 'djangogirlstz/images/lupyana.png'
+        },
+        {
+            'name': 'Fuad',
+            'role': 'Software Engineer',
+            'bio': 'Fuad is passionate about coding and enjoys solving complex problems.',
+            'image': 'djangogirlstz/images/fuad.png'  
+        },
+        {
+            'name': 'Glory',
+            'role': 'Web Developer',
+            'bio': 'Glory loves creating beautiful and functional websites.',
+            'image': 'djangogirlstz/images/team.jpeg'  
+        },
+        {
+            'name': 'Sabrina',
+            'role': 'Data Scientist',
+            'bio': 'Sabrina enjoys working with data and uncovering insights.',
+            'image': 'djangogirlstz/images/team.jpeg'  
+        },
+        {
+            'name': 'Thecla',
+            'role': 'UX/UI Designer',
+            'bio': 'Thecla is dedicated to designing user-friendly interfaces.',
+            'image': 'djangogirlstz/images/team.jpeg'  
+        },
+        {
+            'name': 'Basilisa',
+            'role': 'Project Manager',
+            'bio': 'Basilisa ensures that projects run smoothly and on time.',
+            'image': 'djangogirlstz/images/team.jpeg' 
+        },
+        {
+            'name': 'Hajra',
+            'role': 'Quality Assurance',
+            'bio': 'Hajra focuses on maintaining high quality in all our projects.',
+            'image': 'djangogirlstz/images/team.jpeg' 
+        },
+        {
+            'name': 'Zubeda',
+            'role': 'Content Writer',
+            'bio': 'Zubeda crafts engaging content for our community.',
+            'image': 'djangogirlstz/images/team.jpeg' 
+        },
+        {
+            'name': 'Debora',
+            'role': 'Marketing Specialist',
+            'bio': 'Debora is skilled in promoting our initiatives and reaching more women.',
+            'image': 'djangogirlstz/images/team.jpeg' 
+        },
+    ]
+
+    context = {
+        'team_members': team_members
+    }
+    return render(request, 'about.html', context)

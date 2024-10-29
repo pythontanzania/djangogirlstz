@@ -1,0 +1,75 @@
+{% extends "_base.html" %}
+{% load compress %} 
+{% load static %}
+
+{% block content %}
+<div class="about-page"> 
+
+    <!-- About Django Girls Section -->
+    <section class="about-section mb-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="display-3 custom-heading" style="color:#F79420">About Django Girls</h2>
+                    <p class="lead">Django Girls is a non-profit organization and a community that empowers women to organize free, one-day programming workshops by providing tools, resources, and support. We are a volunteer-run organization with hundreds of people contributing to bring more amazing women into the world of technology.</p>
+                    <a href="#" class="learn-more">Learn More →</a>
+                </div>
+                <div class="col-md-6 splash-background">
+                    <img src="{% static 'djangogirlstz/images/Aboutdj.jpg' %}" alt="Django Girls" class="img-fluid">
+                </div>                
+            </div>
+        </div>
+    </section>
+    
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision mb-5">
+        <div class="container text-center">
+            <h3 class="custom-subheading justify-align-center mt-4" style="color:#F79420">Mission & Vision</h3>
+            <div class="row">
+                <!-- Mission Card -->
+                <div class="col-md-6 mb-3">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body p-5">
+                            <h4 class="card-title mission-title">Mission</h4>
+                            <p class="card-text">Our mission is to foster a deep passion for software development through targeted outreach, empowering women to embrace technical skills, and increasing participation in tech-related fields.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vision Card -->
+                <div class="col-md-6 mb-3">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h4 class="card-title vision-title">Vision</h4>
+                            <p class="card-text">Our vision is to create an inclusive tech ecosystem where women are empowered to lead, innovate, and shape the future of technology, significantly increasing their representation and impact in tech-related fields in Africa and the world.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Team Section -->
+    <section class="team mb-5">
+        <div class="container">
+            <h2 class="text-center custom-subheading">Meet Our Team</h2>
+            <div class="row">
+                {% for member in team_members %}
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="team-member text-center p-3">
+                        <img src="{% static member.image %}" alt="{{ member.name }}" class="img-fluid rounded-circle team-image">
+                        <h4>{{ member.name }}</h4>
+                        <p>{{ member.role }}</p>
+                        <p class="bio">{{ member.bio }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    
+
+</div>
+{% endblock %}
