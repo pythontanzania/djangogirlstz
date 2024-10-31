@@ -38,12 +38,7 @@ def events(request):
     return render(request, 'events.html', {'form': form})
 
 def code_of_conduct(request):
-    form = SubscriptionForm()
-    if request.method == 'POST':
-        form = SubscriptionForm(request.POST)
-        if form.is_valid():
-            form.save()
-    return render(request, 'code_of_conduct.html', {'form': form})
+    return render(request, 'code_of_conduct.html')
 
 def dar(request):
     form = SubscriptionForm()  
