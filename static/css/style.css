@@ -622,10 +622,6 @@ body {
   text-align: left;
 }
 
-.events-page .accordion-button {
-  /* background-color: #f79420 !important;  */
-  /* color: white; */
-}
 
 .accordion-button:not(.collapsed) {
   color: white;
@@ -1100,4 +1096,30 @@ canvas {
   .homepage-hero {
     min-height: -webkit-fill-available;
   }
+}
+
+.code_of_conduct-page .card-conduct {
+  background-color: #fff; 
+  border: none; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  margin-bottom: 1rem; 
+  padding: 1.5rem; 
+}
+
+.code_of_conduct-page .card-conduct:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); 
+}
+
+.code_of_conduct-page.text-start {
+  text-align: left;
+  margin-top: 1rem;
+  margin-bottom: 1rem; 
+}
+
+.code_of_conduct-page.card-title {
+  margin-bottom: 1rem; 
+  color: #f79420;
 }
