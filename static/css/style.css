@@ -1038,3 +1038,223 @@ canvas {
     min-height: -webkit-fill-available;
   }
 }
+ /* about-page */
+
+.about-page {
+  font-family: Mulish, sans-serif;
+}
+
+/* About Section */
+.about-page .about-section {
+  padding: 40px 15px;
+}
+
+.about-page .about-section .vertical-heading {
+  text-align: center;
+  height: auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  color: #F79420;
+  margin-bottom: 30px; /* Add margin for spacing */
+}
+
+/* Responsive font size for heading */
+@media (max-width: 768px) {
+  .about-page .about-section .vertical-heading {
+    font-size: 2rem; /* Smaller font size for medium screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .about-page .about-section .vertical-heading {
+    font-size: 1.5rem; /* Even smaller font size for small screens */
+  }
+}
+
+.about-page .description-card {
+  background-color: white; 
+  border-radius: 10px; 
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  margin: 0 auto; /* Center the card */
+  max-width: 100%; /* Prevent overflow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth shadow transition */
+}
+
+.about-page .description-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Ensure card content is responsive */
+.about-page .description-card .card-body {
+  color: #333;
+}
+
+.about-page .description-card .learn-more {
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #F79420; 
+  text-decoration: none;
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+.about-page .description-card .learn-more:hover {
+  color: #d17c1b; /* Change color on hover */
+}
+
+/* Make card full-width on small devices */
+@media (max-width: 576px) {
+  .about-page .description-card {
+    padding: 15px; /* Reduced padding for smaller devices */
+  }
+}
+
+/* Mission & Vision Section */
+/* .about-page .mission-vision {
+  padding: 40px 15px; 
+} */
+
+.about-page .mission-vision .custom-subheading {
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 40px;
+  color: #F79420;
+}
+
+.about-page .mission-vision .card {
+  border: none;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+}
+
+.about-page .mission-vision .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.about-page .mission-vision .card-title {
+  color: #F79420;
+  font-weight: 700;
+  margin-bottom: 15px;
+  transition: color 0.3s ease-in-out; 
+}
+
+.about-page .mission-vision .card-title:hover {
+  color: #d17c1b;
+}
+
+.about-page .mission-vision .card-text {
+  color: #555;
+  font-size: 1.3rem;
+}
+
+/* Team Section */
+.about-page .team .custom-subheading {
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 30px;
+  color: #F79420;
+}
+
+/* Swiper Container for Team */
+.about-page .team-swiper {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  overflow: hidden; /* Hide overflow from Swiper container */
+}
+
+.about-page .team-swiper .swiper-wrapper {
+  display: flex; /* Maintain flex display for slides */
+}
+
+.about-page .team-swiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added transition for shadow */
+  width: 100%; /* Ensure each slide takes the full width of the container */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.about-page .team-swiper .swiper-slide:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+}
+
+/* Optional: Adding some media queries for responsiveness */
+@media (max-width: 768px) {
+  .about-page .team-swiper .swiper-slide {
+      width: 90%; 
+  }
+}
+
+.about-page .team .team-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid #F79420;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.about-page .team .team-image:hover {
+  transform: scale(1.1); 
+}
+
+.about-page .team .role {
+  color: #333;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.about-page .team .bio {
+  color: #666;
+  font-size: 0.9rem;
+  padding: 0 10px;
+}
+
+/* Swiper Navigation and Pagination */
+.about-page .swiper-pagination-bullet {
+  background-color: #F79420; 
+  opacity: 0.5; 
+  transition: background-color 0.3s ease, opacity 0.3s ease; 
+}
+.about-page .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #d17c1b;
+  opacity: 1; 
+}
+
+.about-page .swiper-button-next,
+.about-page .swiper-button-prev {
+  color: #F79420;
+}
+
+.about-page .swiper-button-next:hover,
+.about-page .swiper-button-prev:hover {
+  color: #d17c1b; 
+}
+
+/* Swiper Coverflow Effect */
+.swiper-slide-active {
+  transform: scale(1.15);
+  border: 2px solid #F79420;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-page .team-swiper .swiper-slide {
+      padding: 10px;
+  }
+}

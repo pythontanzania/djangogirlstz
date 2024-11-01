@@ -94,71 +94,72 @@ def subscribe(request):
 def about(request):
     team_members = [
         {
-            'name': 'Catherine',
-            'role': 'Developer',
+            'name': 'CatherineRose',
+            'role': 'Chairperson',
             'bio': 'Short bio about Catherine. A fun fact!',
             'image': 'djangogirlstz/images/c-catherinerose.png'
         },
         {
             'name': 'Noah',
-            'role': 'Designer',
+            'role': 'Patron',
             'bio': 'Short bio about Noah. A fun fact!',
             'image': 'djangogirlstz/images/c-noah.png'
         },
         {
             'name': 'Lupyana',
-            'role': 'Project Manager',
+            'role': 'Software Developer',
             'bio': 'Short bio about Lupyana. A fun fact!',
             'image': 'djangogirlstz/images/lupyana.png'
         },
         {
             'name': 'Fuad',
-            'role': 'Software Engineer',
+            'role': 'Backend Developer',
             'bio': 'Fuad is passionate about coding and enjoys solving complex problems.',
             'image': 'djangogirlstz/images/fuad.png'  
         },
         {
             'name': 'Glory',
-            'role': 'Web Developer',
+            'role': 'Tech Enthusiast',
             'bio': 'Glory loves creating beautiful and functional websites.',
             'image': 'djangogirlstz/images/team.jpeg'  
         },
         {
             'name': 'Sabrina',
-            'role': 'Data Scientist',
+            'role': 'Developer',
             'bio': 'Sabrina enjoys working with data and uncovering insights.',
             'image': 'djangogirlstz/images/team.jpeg'  
         },
         {
             'name': 'Thecla',
-            'role': 'UX/UI Designer',
+            'role': 'Tech Enthusiast',
             'bio': 'Thecla is dedicated to designing user-friendly interfaces.',
             'image': 'djangogirlstz/images/team.jpeg'  
         },
         {
             'name': 'Basilisa',
-            'role': 'Project Manager',
+            'role': 'Tech Enthusiast',
             'bio': 'Basilisa ensures that projects run smoothly and on time.',
             'image': 'djangogirlstz/images/team.jpeg' 
         },
         {
             'name': 'Hajra',
-            'role': 'Quality Assurance',
+            'role': 'Tech Enthusiast',
             'bio': 'Hajra focuses on maintaining high quality in all our projects.',
             'image': 'djangogirlstz/images/team.jpeg' 
         },
         {
             'name': 'Zubeda',
-            'role': 'Content Writer',
+            'role': 'Developer',
             'bio': 'Zubeda crafts engaging content for our community.',
             'image': 'djangogirlstz/images/team.jpeg' 
         },
         {
             'name': 'Debora',
-            'role': 'Marketing Specialist',
+            'role': 'Developer',
             'bio': 'Debora is skilled in promoting our initiatives and reaching more women.',
             'image': 'djangogirlstz/images/team.jpeg' 
         },
+        
     ]
 
     context = {
