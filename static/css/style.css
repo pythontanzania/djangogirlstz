@@ -302,18 +302,6 @@ body {
   opacity: 0.9;
 }
 
-/* Navbar for Mobile View */
-/* @media (max-width: 768px) {
-  .community-page .navbar-collapse {
-    background-color: #000;
-    padding: 1rem;
-  }
-
-  .community-page .navbar .nav-link {
-    padding: 0.5rem 1rem;
-    color: white;
-  }
-} */
 
 /* Custom Card Styles */
 .community-page .custom-card {
@@ -365,11 +353,11 @@ body {
 
 /* Carousel Container */
 .community-page .left-card .info_card {
-  background-color: #f8f9fa; 
-  padding: 80px 80px;
+  background-color: #f8f9fa;
+  padding: 70px 50px;
   border-radius: 8px;
   width: 80%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1;
 }
@@ -403,78 +391,33 @@ body {
   display: inline-block;
   margin-top: 10px;
 }
-/* .community-page .carousel-container {
-  position: relative;
-  margin-left: -200px; 
-  z-index: 2;
-  overflow: hidden;
-} */
-/* Media Query for Small Devices */
-/* @media (max-width: 768px) { 
-  .community-page .carousel-container {
-    margin-left: 0;
-  }
-}.community-page .carousel-inner {
-  /* display: flex; */
-  /* animation: slide 120s infinite linear; */
-  /* width: 150%; 
-  transition: transform 1.5s ease;
-} */ 
-/* .community-page .carousel-inner img {
-  object-fit: cover;
-  width: 100%;
-  height: auto;
-  border-radius: 10px; 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
-}
-@media (max-width: 768px) {
-  .community-page .carousel-inner img {
-    max-height: 300px; 
-  }
-} */
-/* .community-page .carousel-inner img:hover {
-  transform: scale(1.05); 
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-.community-page {
-  position: relative;
-}
-@media (max-width: 768px) {
-  .community-page {
-    display: flex;
-    flex-direction: column; 
-  }
 
-  .community-page .carousel-container {
-    order: 1; 
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  .community-page .carousel-inner {
-    flex-direction: column; 
-  }
-} */
- .community-page .left-card, .swiper {
-  padding: 0; /* Remove padding */
-  margin: 0;  /* Remove margin */
-}
-
-.community-page .swiper {
-  width: 100%;
-  height: 100%;
-}
  
 
+.community-page .swiper {
+  width: 120%; 
+  margin-left: -20%;
+  height: 50vh;
+}
 
+@media (max-width: 768px) {
+  .community-page .swiper {
+    height: 30vh; /* Smaller height for mobile screens */
+  }
+}
 .community-page .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 75%;
+  height: 100%;
   overflow: hidden;
   position: relative;
+  
+}
+.community-page .carousel-container {
+  overflow: hidden;
+  position: relative;
+  /* margin-top: -5vh; */
 }
 
 
@@ -482,26 +425,29 @@ body {
 /* Ensure images fill the slides */
 .community-page .swiper-slide img {
   width: 100%;
-  height: 75%;
+ height: 100%; 
+  object-fit: cover;
   border-radius: 8px;
-  /* object-fit: cover; */
 }
-.community-page .swiper-slide img:hover {
-  transform: scale(1.05) translateY(-10px); /* Scale up and move up */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease; /* Smooth transition for the effect */
-}
+
 .community-page .swiper-button-next,
 .community-page .swiper-button-prev {
-  color: #F79420; /* Set color for navigation arrows */
+  color: #F79420; 
 }
  .community-page .swiper-pagination-bullet {
-  background-color: #F79420; /* Default color for pagination bullets */
+  background-color: #F79420; 
+  width: 12px;             
+  height: 12px;            
+  margin: 0 10px;          
+   transition: opacity 0.3s; 
 }
 
 /* Active Pagination Dot */
 .swiper-pagination-bullet-active {
-  background-color: #F79420; /* Color for the active pagination bullet */
+  background-color: #F79420;
+}
+.community-page .swiper-slide-active img {
+  transform: translateX(-10%); 
 }
 
 
