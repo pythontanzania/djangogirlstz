@@ -37,6 +37,9 @@ def events(request):
             form.save()
     return render(request, 'events.html', {'form': form})
 
+def code_of_conduct(request):
+    return render(request, 'code_of_conduct.html')
+
 def dar(request):
     form = SubscriptionForm()  
     if request.method == 'POST':
