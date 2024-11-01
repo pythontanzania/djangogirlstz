@@ -44,6 +44,8 @@ def events(request):
 #         if form.is_valid():
 #             form.save()
 #     return render(request, 'about.html', {'form': form})
+def code_of_conduct(request):
+    return render(request, 'code_of_conduct.html')
 
 def dar(request):
     form = SubscriptionForm()  
