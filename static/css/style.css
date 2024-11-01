@@ -402,7 +402,9 @@ body {
 
 @media (max-width: 768px) {
   .community-page .swiper {
-    height: 30vh; /* Smaller height for mobile screens */
+    height: 30vh; 
+    display: flex;
+    margin-top: 20px;
   }
 }
 .community-page .swiper-slide {
