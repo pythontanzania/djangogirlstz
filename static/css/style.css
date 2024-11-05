@@ -395,8 +395,8 @@ body {
  
 
 .community-page .swiper {
-  width: 120%; 
-  margin-left: -20%;
+  width: 100%; 
+  /* margin-left: -5%; */
   height: 50vh;
 }
 
@@ -435,13 +435,29 @@ body {
 .community-page .swiper-button-next,
 .community-page .swiper-button-prev {
   color: #F79420; 
+  display: block;
+}
+@media (max-width: 768px) {
+    .community-page .swiper-button-next,
+    .community-page .swiper-button-prev {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .community-page .swiper-button-next,
+    .community-page .swiper-button-prev {
+        font-size: 14px;
+        padding: 6px;
+    }
 }
  .community-page .swiper-pagination-bullet {
   background-color: #F79420; 
   width: 12px;             
   height: 12px;            
   margin: 0 10px;          
-   transition: opacity 0.3s; 
+  transition: opacity 0.3s; 
 }
 
 /* Active Pagination Dot */
