@@ -1046,7 +1046,7 @@ canvas {
 
 /* About Section */
 .about-page .about-section {
-  padding: 40px 15px;
+  /* padding: 40px 15px; */
 }
 
 .about-page .about-section .vertical-heading {
@@ -1076,7 +1076,6 @@ canvas {
   background-color: white; 
   border-radius: 10px; 
   border: 1px solid #e0e0e0;
-  padding: 20px;
   margin: 0 auto; /* Center the card */
   max-width: 100%; /* Prevent overflow */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
@@ -1108,14 +1107,11 @@ canvas {
 /* Make card full-width on small devices */
 @media (max-width: 576px) {
   .about-page .description-card {
-    padding: 15px; /* Reduced padding for smaller devices */
+    padding: 15x; 
   }
 }
 
-/* Mission & Vision Section */
-/* .about-page .mission-vision {
-  padding: 40px 15px; 
-} */
+
 
 .about-page .mission-vision .custom-subheading {
   font-weight: 600;
@@ -1128,7 +1124,6 @@ canvas {
   border: none;
   border-radius: 10px;
   background-color: #f9f9f9;
-  padding: 20px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
 }
 
