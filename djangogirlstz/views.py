@@ -96,67 +96,67 @@ def about(request):
         {
             'name': 'CatherineRose',
             'role': 'Convener',
-            'bio': 'Building inclusive ecosystem focused oon skill development',
+            'bio': 'Catherine Rose is dedicated to building an inclusive ecosystem that empowers everyone through skill development and collaboration.',
             'image': 'djangogirlstz/images/c-catherinerose.png'
         },
         {
             'name': 'Noah',
             'role': 'Patron',
-            'bio': 'Engineering development and swimming',
+            'bio': 'Noah combines his passion for engineering and development with his love for swimming, making a splash in both fields!',
             'image': 'djangogirlstz/images/c-noah.png'
         },
         {
             'name': 'Lupyana',
             'role': 'Software Developer',
-            'bio': 'He does not have a fun fact',
+            'bio': 'He’s still thinking of a fun fact to share!',
             'image': 'djangogirlstz/images/lupyana.png'
         },
         {
             'name': 'Fuad',
             'role': 'Systems Engineer',
-            'bio': 'Fuad is a professional pool table player.',
+            'bio': 'When he’s not engineering systems, Fuad is honing his skills as a professional pool table player.',
             'image': 'djangogirlstz/images/fuad.png'  
         },
         {
             'name': 'Glory',
-            'role': 'Tech Enthusiast',
-            'bio': 'Glory loves to implement things that are imaginable.',
+            'role': 'Chapter Lead - Ardhi University',
+            'bio': 'Glory loves turning imaginative ideas into reality through her passion for technology.',
             'image': 'djangogirlstz/images/team.jpeg'  
         },
         {
             'name': 'Sabrina',
             'role': 'Developer',
-            'bio': 'Sabrina enjoys working with data and uncovering insights.',
+            'bio': 'Sabrina is a team player and a developer who thrives both in collaboration and independent work!',
             'image': 'djangogirlstz/images/team.jpeg'  
         },
         {
             'name': 'Thecla',
-            'role': 'Tech Enthusiast',
-            'bio': 'Thecla is dedicated to designing user-friendly interfaces.',
+            'role': 'Chapter Lead - UDSM',
+            'bio': 'Thecla brings the perfect mix of fun and focus—she’s dedicated to her work but knows how to keep things lively',
             'image': 'djangogirlstz/images/team.jpeg'  
         },
         {
             'name': 'Basilisa',
-            'role': 'Tech Enthusiast',
+            'role': 'Chapter Lead - DIT',
             'bio': 'Basilisa ensures that projects run smoothly and on time.',
             'image': 'djangogirlstz/images/team.jpeg' 
         },
         {
             'name': 'Hajra',
-            'role': 'Tech Enthusiast',
-            'bio': 'Hajra focuses on maintaining high quality in all our projects.',
+            'role': 'Chapter Mentor',
+            'bio': 'Hajra’s dedication and drive inspire others on their tech journeys. She’s always ready to lend a helping hand and share her passion for learning',
             'image': 'djangogirlstz/images/team.jpeg' 
         },
         {
             'name': 'Zubeda',
-            'role': 'Developer',
-            'bio': 'Zubeda crafts engaging content for our community.',
+            'role': 'Chapter Lead - Mzumbe/Developer',
+            'bio': 'Zubeda is a dedicated soul with infectious energy, bringing a unique charm that brightens the team!',
             'image': 'djangogirlstz/images/team.jpeg' 
         },
         {
             'name': 'Debora',
             'role': 'Developer',
-            'bio': 'Debora is skilled in promoting our initiatives and reaching more women.',
+            'bio': 'Debora is a very curious thinker with a logical mind who loves to learn.',
             'image': 'djangogirlstz/images/team.jpeg' 
         },
         

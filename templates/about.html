@@ -6,27 +6,30 @@
 <div class="about-page"> 
 
     <!-- About Django Girls Section -->
-    <section class="about-section  mt-5 mb-5">
+    <section class="about-section mt-5 mb-5">
         <div class="container">
             <div class="card description-card shadow-sm">
                 <div class="card-body">
                     <div class="row align-items-center">
-                        <!-- Left Side: About Django Girls Heading -->
+                        <!-- Left Side: About Django Girls Heading and Description -->
                         <div class="col-md-6 g-5">
-                            <h2 class="display-2 custom-heading vertical-heading">About Django Girls</h2>
-                        </div>
-                
-                        <!-- Right Side: Card for Description Text and Learn More Link -->
-                        <div class="col-md-6">
-                    
-                            <p class="lead">Django Girls is a non-profit organization and a community that empowers women to organize free, one-day programming workshops by providing tools, resources, and support. We are a volunteer-run organization with hundreds of people contributing to bring more amazing women into the world of technology.</p>
+                            <h2 class="display-3 custom-heading vertical-heading">About Django Girls</h2>
+                            <p class="lead">
+                                Django Girls is a non-profit organization and a community that empowers women to organize free, one-day programming workshops by providing tools, resources, and support. We are a volunteer-run organization with hundreds of people contributing to bring more amazing women into the world of technology.
+                            </p>
                             <a href="{% url 'home' %}" class="learn-more">Learn More →</a>
+                        </div>
+                        
+                        <!-- Right Side: Image -->
+                        <div class="col-md-6">
+                            <img src="{% static 'djangogirlstz/images/Rectangle 45.png' %}" alt="Django Girls" class="img-fluid rounded">
                         </div>
                     </div>
                 </div>                
             </div>
         </div>
     </section>
+    
     
     
     

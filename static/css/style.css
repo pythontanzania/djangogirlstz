@@ -1046,7 +1046,8 @@ canvas {
 
 /* About Section */
 .about-page .about-section {
-  /* padding: 40px 15px; */
+ 
+  padding: 40px 15px; 
 }
 
 .about-page .about-section .vertical-heading {
@@ -1056,19 +1057,19 @@ canvas {
   flex-direction: column;
   align-items: center; 
   color: #F79420;
-  margin-bottom: 30px; /* Add margin for spacing */
+  
 }
 
 /* Responsive font size for heading */
 @media (max-width: 768px) {
   .about-page .about-section .vertical-heading {
-    font-size: 2rem; /* Smaller font size for medium screens */
+    font-size: 2rem; 
   }
 }
 
 @media (max-width: 576px) {
   .about-page .about-section .vertical-heading {
-    font-size: 1.5rem; /* Even smaller font size for small screens */
+    font-size: 1.5rem;
   }
 }
 
@@ -1076,10 +1077,10 @@ canvas {
   background-color: white; 
   border-radius: 10px; 
   border: 1px solid #e0e0e0;
-  margin: 0 auto; /* Center the card */
-  max-width: 100%; /* Prevent overflow */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-  transition: box-shadow 0.3s ease-in-out; /* Smooth shadow transition */
+  margin: 0 auto; 
+  max-width: 100%; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: box-shadow 0.3s ease-in-out; /
 }
 
 .about-page .description-card:hover {
@@ -1089,6 +1090,7 @@ canvas {
 /* Ensure card content is responsive */
 .about-page .description-card .card-body {
   color: #333;
+  
 }
 
 .about-page .description-card .learn-more {
