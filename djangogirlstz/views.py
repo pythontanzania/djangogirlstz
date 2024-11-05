@@ -95,32 +95,32 @@ def about(request):
     team_members = [
         {
             'name': 'CatherineRose',
-            'role': 'Chairperson',
-            'bio': 'Short bio about Catherine. A fun fact!',
+            'role': 'Convener',
+            'bio': 'Building inclusive ecosystem focused oon skill development',
             'image': 'djangogirlstz/images/c-catherinerose.png'
         },
         {
             'name': 'Noah',
             'role': 'Patron',
-            'bio': 'Short bio about Noah. A fun fact!',
+            'bio': 'Engineering development and swimming',
             'image': 'djangogirlstz/images/c-noah.png'
         },
         {
             'name': 'Lupyana',
             'role': 'Software Developer',
-            'bio': 'Short bio about Lupyana. A fun fact!',
+            'bio': 'He does not have a fun fact',
             'image': 'djangogirlstz/images/lupyana.png'
         },
         {
             'name': 'Fuad',
-            'role': 'Backend Developer',
-            'bio': 'Fuad is passionate about coding and enjoys solving complex problems.',
+            'role': 'Systems Engineer',
+            'bio': 'Fuad is a professional pool table player.',
             'image': 'djangogirlstz/images/fuad.png'  
         },
         {
             'name': 'Glory',
             'role': 'Tech Enthusiast',
-            'bio': 'Glory loves creating beautiful and functional websites.',
+            'bio': 'Glory loves to implement things that are imaginable.',
             'image': 'djangogirlstz/images/team.jpeg'  
         },
         {
