@@ -566,37 +566,7 @@ body {
   font-family: "Munish", sans-serif;
   font-weight: 900;
 }
-/* Card image styling */
-.events-page .card-img-top {
-  object-fit: cover; /* Ensures the image covers the area */
-  height: 500px; /* Adjust this value to reduce the height of the card image */
-  width: 100%; /* Ensures the image takes the full width of the card */
-}
 
-/* Card body styling */
-.events-page .card-body {
-  height: 100%; /* Makes all cards the same height */
-}
-
-/* Optional: Add margin for spacing between cards */
-.events-page .card {
-  margin-bottom: 15px;
-}
-
-/* Adjust text color for card city and date */
-.events-page .card-city,
-.events-page .card-date {
-  font-size: 14px;
-  color: #6c757d;
-}
-.events-page .footer__btn {
-  background-color: #f79420;
-  color: white;
-}
-
-.events-page .footer__btn:hover {
-  background-color: #e68a00;
-}
 .events-page .view-all-btn {
   background-color: #f79420;
   color: white;
@@ -613,6 +583,76 @@ body {
   line-height: 60.24px;
   text-align: left;
 }
+/* Container styling for centering */
+.events-page .event-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Event card styling */
+.events-page .event-card {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Event title styling */
+.events-page .event-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Event details styling */
+.events-page .event-details p {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* Icon styling */
+.events-page .event-details i {
+  margin-right: 8px;
+  color: #333;
+}
+
+/* Description styling */
+.events-page .event-description {
+  margin: 15px 0;
+  line-height: 1.5;
+  color: #555;
+  font-size: 1em;
+}
+
+/* Register button styling */
+.events-page .register-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: #f79420; /* Red color for button */
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.events-page .register-button:hover {
+  background-color: #ea8613; /* Darker red on hover */
+}
+
 
 /* Resources-page */
 .resources-page .navbar {

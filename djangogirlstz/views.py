@@ -4,6 +4,8 @@ from django.views.generic import TemplateView
 from .forms import SubscriptionForm 
 from .forms import UserRegistrationForm
 from .forms import LoginForm
+from .models import Event
+
 
 class HomePageView(TemplateView):
     template_name = "index.html"
@@ -30,12 +32,13 @@ def resources(request):
     return render(request, 'resources.html', {'form': form})
 
 def events(request):
+    events = Event.objects.all()  # Fetch all events from the database
     form = SubscriptionForm()
     if request.method == 'POST':
         form = SubscriptionForm(request.POST)
         if form.is_valid():
             form.save()
-    return render(request, 'events.html', {'form': form})
+    return render(request, 'events.html', {'form': form, 'events': events})
 
 def dar(request):
     form = SubscriptionForm()  
