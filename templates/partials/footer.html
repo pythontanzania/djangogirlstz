@@ -109,7 +109,7 @@
         const swiper = new Swiper('.swiper', {
           direction: 'horizontal',
           loop: true,
-          slidesPerView: 2,
+          slidesPerView: 2.5,
           spaceBetween: 10,
           autoplay: {
             delay: 3000,
@@ -122,6 +122,16 @@
           navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
+          },
+          breakpoints: {
+            // Small devices (up to 767px)
+            0: {
+              slidesPerView: 2,
+            },
+            // Medium and large devices (768px and above)
+            768: {
+              slidesPerView: 2.5,
+            },
           },
         });
       });

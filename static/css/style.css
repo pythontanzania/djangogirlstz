@@ -263,8 +263,6 @@ body {
   margin-top: 50px;
 }
 
-/* community */
-
 /* General Body Styles */
 .community-page body {
   font-family: "Mulish", sans-serif;
@@ -275,7 +273,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Links */
+/* Background Overlay */
 .community-page .background-overlay {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/static/djangogirlstz/images/Rectangle 45.png");
@@ -289,19 +287,11 @@ body {
   color: white;
   background-repeat: no-repeat;
 }
+
+/* Links */
 .community-page a:hover {
   color: #f79420;
 }
-
-/* Buttons */
-.community-page .btn {
-  transition: all 0.3s ease-in-out;
-}
-
-.community-page .btn:hover {
-  opacity: 0.9;
-}
-
 
 /* Custom Card Styles */
 .community-page .custom-card {
@@ -350,19 +340,32 @@ body {
   text-align: center;
 }
 
-
 /* Carousel Container */
+.community-page .left-card {
+  padding: 0;
+  margin: 0; 
+}
+
+.community-page .carousel-container {
+  margin: 0;
+  padding: 0;
+  display: flex; 
+}
+@media (max-width: 768px) {
+  .community-page .carousel-container {
+    flex-direction: column; /* Stack elements vertically on small screens */
+  }
+}
 .community-page .left-card .info_card {
   background-color: #f8f9fa;
-  padding: 70px 50px;
+  padding: 100px 50px;
   border-radius: 8px;
-  width: 80%;
+  width: 100%; /* Ensures it occupies full width */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1;
 }
 
-/* Media Query for Small Devices */
 @media (max-width: 768px) {
   .community-page .left-card .info_card {
     padding: 20px;
@@ -371,10 +374,11 @@ body {
   }
 }
 
+
+/* Text Styles */
 .community-page .left-card h2 {
   font-size: 26px;
   font-weight: bold;
-  /* margin-bottom: 15px; */
 }
 
 .community-page .left-card p {
@@ -392,12 +396,11 @@ body {
   margin-top: 10px;
 }
 
- 
-
+/* Swiper Styles */
 .community-page .swiper {
   width: 100%; 
-  /* margin-left: -5%; */
   height: 50vh;
+  padding: 0; /* Ensures full-width display */
 }
 
 @media (max-width: 768px) {
@@ -407,6 +410,7 @@ body {
     margin-top: 20px;
   }
 }
+
 .community-page .swiper-slide {
   display: flex;
   justify-content: center;
@@ -414,59 +418,55 @@ body {
   height: 100%;
   overflow: hidden;
   position: relative;
-  
-}
-.community-page .carousel-container {
-  overflow: hidden;
-  position: relative;
-  /* margin-top: -5vh; */
 }
 
-
-
-/* Ensure images fill the slides */
+/* Image Styles */
 .community-page .swiper-slide img {
   width: 100%;
- height: 100%; 
+  height: 100%; 
   object-fit: cover;
   border-radius: 8px;
 }
 
+/* Navigation and Pagination Styles */
 .community-page .swiper-button-next,
 .community-page .swiper-button-prev {
   color: #F79420; 
   display: block;
 }
+
 @media (max-width: 768px) {
-    .community-page .swiper-button-next,
-    .community-page .swiper-button-prev {
-        font-size: 18px;
-        padding: 8px;
-    }
+  .community-page .swiper-button-next,
+  .community-page .swiper-button-prev {
+    font-size: 18px;
+    padding: 8px;
+  }
 }
 
 @media (max-width: 480px) {
-    .community-page .swiper-button-next,
-    .community-page .swiper-button-prev {
-        font-size: 14px;
-        padding: 6px;
-    }
-}
- .community-page .swiper-pagination-bullet {
-  background-color: #F79420; 
-  width: 12px;             
-  height: 12px;            
-  margin: 0 10px;          
-  transition: opacity 0.3s; 
+  .community-page .swiper-button-next,
+  .community-page .swiper-button-prev {
+    font-size: 14px;
+    padding: 6px;
+  }
 }
 
-/* Active Pagination Dot */
+.community-page .swiper-pagination-bullet {
+  background-color: #F79420; 
+  width: 12px;
+  height: 12px;
+  margin: 0 10px;
+  transition: opacity 0.3s;
+}
+
 .swiper-pagination-bullet-active {
   background-color: #F79420;
 }
+
 .community-page .swiper-slide-active img {
   transform: translateX(-10%); 
 }
+
 
 
 /* events-page */
