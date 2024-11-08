@@ -121,7 +121,7 @@ def about(request):
             'name': 'Glory',
             'role': 'Chapter Lead - Ardhi University',
             'bio': 'Glory loves turning imaginative ideas into reality through her passion for technology.',
-            'image': 'djangogirlstz/images/team.jpeg'  
+            'image': 'djangogirlstz/images/Glory.jpeg'  
         },
         {
             'name': 'Sabrina',
@@ -133,13 +133,13 @@ def about(request):
             'name': 'Thecla',
             'role': 'Chapter Lead - UDSM',
             'bio': 'Thecla brings the perfect mix of fun and focus—she’s dedicated to her work but knows how to keep things lively',
-            'image': 'djangogirlstz/images/team.jpeg'  
+            'image': 'djangogirlstz/images/Thecla.jpeg'  
         },
         {
             'name': 'Basilisa',
             'role': 'Chapter Lead - DIT',
             'bio': 'Basilisa ensures that projects run smoothly and on time.',
-            'image': 'djangogirlstz/images/team.jpeg' 
+            'image': 'djangogirlstz/images/Basilisa.jpeg' 
         },
         {
             'name': 'Hajra',
@@ -151,13 +151,13 @@ def about(request):
             'name': 'Zubeda',
             'role': 'Chapter Lead - Mzumbe/Developer',
             'bio': 'Zubeda is a dedicated soul with infectious energy, bringing a unique charm that brightens the team!',
-            'image': 'djangogirlstz/images/team.jpeg' 
+            'image': 'djangogirlstz/images/Zubeda.jpeg' 
         },
         {
             'name': 'Debora',
             'role': 'Developer',
             'bio': 'Debora is a very curious thinker with a logical mind who loves to learn.',
-            'image': 'djangogirlstz/images/team.jpeg' 
+            'image': 'djangogirlstz/images/Debrah.jpeg' 
         },
         
     ]
