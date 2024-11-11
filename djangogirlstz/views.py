@@ -96,7 +96,7 @@ def about(request):
         {
             'name': 'CatherineRose',
             'role': 'Convener',
-            'bio': 'Catherine Rose is dedicated to building an inclusive ecosystem that empowers everyone through skill development and collaboration.',
+            'bio': 'CatherineRose is dedicated to building an inclusive ecosystem that empowers everyone through skill development and collaboration.',
             'image': 'djangogirlstz/images/c-catherinerose.png'
         },
         {

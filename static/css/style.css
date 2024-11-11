@@ -1038,17 +1038,18 @@ canvas {
     min-height: -webkit-fill-available;
   }
 }
- /* about-page */
 
- .about-page {
-  font-family: Mulish, sans-serif;
+ /* about-page */
+.about-page .container-fluid{
+  height: 100vh;
 }
 
-.about-page .background-overlay {
+.about-page .background-overlay{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/static/djangogirlstz/images/Rectangle 45.png");
+   url("/static/djangogirlstz/images/About.webp");
   background-size: cover;
   background-position: center;
+  position: relative;
   height: 90vh;
   width: 100%;
   display: flex;
@@ -1056,246 +1057,192 @@ canvas {
   align-items: center;
   color: white;
   background-repeat: no-repeat;
+  z-index: 1;
+
+}
+ .about-page .text-center {
+  position: relative;
+  z-index: 2;
+  color: #f79420; 
+}
+.about-page .text-center .para{
+  color:white;
+  
 }
 
-/* About Section */
-.about-page .about-section {
-  padding: 40px 15px;
+.about-page .mission-vision {
+  padding: 60px 0;
 }
 
-.about-page .about-section .vertical-heading {
-  text-align: center;
-  height: auto;
+.about-page .mission-vision .row {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  color: #F79420;
 }
 
-/* Responsive font size for heading */
-@media (max-width: 768px) {
-  .about-page .about-section .vertical-heading {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .about-page .about-section .vertical-heading {
-    font-size: 1.5rem;
-  }
-}
-
-.about-page .description-card {
-  background-color: white;
-  border-radius: 10px;
-  border: 1px solid #e0e0e0;
-  margin: 0 auto;
-  max-width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.about-page .description-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
-}
-
-/* Ensure card content is responsive */
-.about-page .description-card .card-body {
-  color: #333;
-}
-
-.about-page .description-card .learn-more {
-  display: inline-block;
-  margin-top: 20px;
-  font-weight: 600;
-  color: #F79420;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-.about-page .description-card .learn-more:hover {
-  color: #d17c1b; /* Change color on hover */
-}
-
-/* Make card full-width on small devices */
-@media (max-width: 576px) {
-  .about-page .description-card {
-    padding: 15px;
-  }
-}
-
-.about-page .mission-vision .custom-subheading {
-  font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 40px;
-  color: #F79420;
-}
-
-.about-page .mission-vision .card {
-  border: none;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.about-page .mission-vision .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.about-page .mission-vision .card-title {
-  color: #F79420;
-  font-weight: 700;
-  margin-bottom: 15px;
-  transition: color 0.3s ease-in-out;
-}
-
-.about-page .mission-vision .card-title:hover {
-  color: #d17c1b;
-}
-
-.about-page .mission-vision .card-text {
-  color: #555;
-  font-size: 1.3rem;
-}
-
-/* Team Section */
-.about-page .team .custom-subheading {
-  font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 30px;
-  color: #F79420;
-}
-
-/* Swiper Container for Team */
-.about-page .team-swiper {
-  padding-top: 20px;
-  padding-bottom: 40px;
-  overflow: hidden; /* Hide overflow from Swiper container */
-}
-
-.about-page .team-swiper .swiper-wrapper {
+.about-page .mission-vision .icon-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
   display: flex;
-  flex-wrap: wrap; /* Ensure wrapping on smaller screens */
-  justify-content: space-around;
-}
-
-.about-page .team-swiper .swiper-slide {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 100%;
-  box-sizing: border-box;
-  margin: 10px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.about-page .team-swiper .swiper-slide:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Optional: Adding some media queries for responsiveness */
-@media (max-width: 768px) {
-  .about-page .team-swiper .swiper-slide {
-    width: 90%; /* Slightly reduce width for smaller screens */
-    padding: 10px; /* Adjust padding */
-  }
-}
-
-@media (max-width: 576px) {
-  .about-page .team-swiper .swiper-slide {
-    flex: 1 1 100%; /* One slide per row on small screens */
-  }
-}
-
-.about-page .team .team-image {
-  width: 100%;
-  max-width: 100px;
-  height:  100px;
+  margin: 0 auto 20px;
+  background: #f79420;
   border-radius: 50%;
-  object-fit: cover; 
-  margin-bottom: 15px;
-  border: 3px solid #F79420;
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
 }
 
-.about-page .team .team-image:hover {
+.about-page .mission-vision .icon-container:hover {
   transform: scale(1.1);
 }
 
-.about-page .team .role {
-  color: #333;
-  font-weight: bold;
+.about-page .mission-vision .mission-icon,
+.about-page .mission-vision .vision-icon {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.about-page .mission-vision h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
   margin-top: 10px;
+  color: #343a40;
 }
 
-.about-page .team .bio {
-  color: #666;
+.about-page .mission-vision .card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.about-page .mission-vision .card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.about-page .mission-vision .mission-description,
+.about-page .mission-vision .vision-description {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .about-page .mission-vision h2 {
+      font-size: 1.6rem;
+  }
+
+  .about-page .mission-vision .icon-container {
+      width: 70px;
+      height: 70px;
+  }
+
+  .about-page .mission-vision .card {
+      padding: 15px;
+  }
+}
+
+
+/* About Page Team Section Styles */
+.about-page .team {
+  padding: 50px 0;
+}
+
+.about-page .team .custom-subheading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #F79420;
+  margin-bottom: 30px;
+}
+
+.about-page .team .swiper-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-page .team .swiper-wrapper {
+  display: flex;
+}
+
+.about-page .team .swiper-slide {
+  width: 250px;  
+  height: 350px; 
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  text-align: center;
+}
+
+.about-page .team .swiper-slide img {
+  width: 100px; 
+  height: 100px; 
+  object-fit: cover; 
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.about-page .team .swiper-slide h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about-page .team .swiper-slide .role {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.about-page .team .swiper-slide .bio {
   font-size: 0.9rem;
-  padding: 0 10px;
+  color: #666;
 }
 
-/* Swiper Navigation and Pagination */
-.about-page .swiper-pagination-bullet {
-  background-color: #F79420;
-  opacity: 0.5;
-  transition: background-color 0.3s ease, opacity 0.3s ease;
+.about-page .team .swiper-button-next,
+.about-page .team .swiper-button-prev {
+  color: #F79420; 
 }
 
-.about-page .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #d17c1b;
-  opacity: 1;
-}
-
-.about-page .swiper-button-next,
-.about-page .swiper-button-prev {
+.about-page .team .swiper-pagination {
+  bottom: 10px;
   color: #F79420;
 }
 
-.about-page .swiper-button-next:hover,
-.about-page .swiper-button-prev:hover {
-  color: #d17c1b;
-}
-
-/* Swiper Coverflow Effect */
-.swiper-slide-active {
-  transform: scale(1.15);
-  border: 2px solid #F79420;
-}
-
-/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .about-page .team-swiper .swiper-slide {
-    padding: 10px;
+  .about-page .team .swiper-slide {
+    width: 200px;
+    height: 300px;
   }
 
-  .about-page .about-section {
-    padding: 20px;
-  }
-
-  .about-page .description-card {
-    padding: 15px;
-    margin: 10px;
+  .about-page .team .swiper-slide img {
+    width: 80px;
+    height: 80px;
   }
 }
+.about-page .team .swiper-pagination .swiper-pagination-bullet {
+  background-color: #F79420;
+}
 
-@media (max-width: 576px) {
-  .about-page .about-section .vertical-heading {
-    font-size: 1.5rem;
-  }
+.about-page .team .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #D97317;
+}
 
-  .about-page .description-card {
-    padding: 10px;
-  }
+.about-page .team .swiper-button-next,
+.about-page .team .swiper-button-prev {
+  color: #F79420;
+}
 
-  .about-page .team-swiper .swiper-slide {
-    width: 100%; /* One slide per row on small screens */
-  }
+.about-page .team .swiper-pagination .swiper-pagination-bullet:hover {
+  background-color: #F2A24B;
 }
