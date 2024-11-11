@@ -1040,30 +1040,42 @@ canvas {
 }
  /* about-page */
 
-.about-page {
+ .about-page {
   font-family: Mulish, sans-serif;
+}
+
+.about-page .background-overlay {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/djangogirlstz/images/Rectangle 45.png");
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-repeat: no-repeat;
 }
 
 /* About Section */
 .about-page .about-section {
- 
-  padding: 40px 15px; 
+  padding: 40px 15px;
 }
 
 .about-page .about-section .vertical-heading {
   text-align: center;
-  height: auto; 
+  height: auto;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
   color: #F79420;
-  
 }
 
 /* Responsive font size for heading */
 @media (max-width: 768px) {
   .about-page .about-section .vertical-heading {
-    font-size: 2rem; 
+    font-size: 2rem;
   }
 }
 
@@ -1074,13 +1086,13 @@ canvas {
 }
 
 .about-page .description-card {
-  background-color: white; 
-  border-radius: 10px; 
+  background-color: white;
+  border-radius: 10px;
   border: 1px solid #e0e0e0;
-  margin: 0 auto; 
-  max-width: 100%; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  transition: box-shadow 0.3s ease-in-out; /
+  margin: 0 auto;
+  max-width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .about-page .description-card:hover {
@@ -1090,16 +1102,15 @@ canvas {
 /* Ensure card content is responsive */
 .about-page .description-card .card-body {
   color: #333;
-  
 }
 
 .about-page .description-card .learn-more {
   display: inline-block;
   margin-top: 20px;
   font-weight: 600;
-  color: #F79420; 
+  color: #F79420;
   text-decoration: none;
-  transition: color 0.3s ease-in-out; /* Smooth color transition */
+  transition: color 0.3s ease-in-out;
 }
 
 .about-page .description-card .learn-more:hover {
@@ -1109,11 +1120,9 @@ canvas {
 /* Make card full-width on small devices */
 @media (max-width: 576px) {
   .about-page .description-card {
-    padding: 15x; 
+    padding: 15px;
   }
 }
-
-
 
 .about-page .mission-vision .custom-subheading {
   font-weight: 600;
@@ -1126,19 +1135,19 @@ canvas {
   border: none;
   border-radius: 10px;
   background-color: #f9f9f9;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .about-page .mission-vision .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .about-page .mission-vision .card-title {
   color: #F79420;
   font-weight: 700;
   margin-bottom: 15px;
-  transition: color 0.3s ease-in-out; 
+  transition: color 0.3s ease-in-out;
 }
 
 .about-page .mission-vision .card-title:hover {
@@ -1166,7 +1175,9 @@ canvas {
 }
 
 .about-page .team-swiper .swiper-wrapper {
-  display: flex; /* Maintain flex display for slides */
+  display: flex;
+  flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+  justify-content: space-around;
 }
 
 .about-page .team-swiper .swiper-slide {
@@ -1179,35 +1190,44 @@ canvas {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added transition for shadow */
-  width: 100%; /* Ensure each slide takes the full width of the container */
-  box-sizing: border-box; /* Include padding in width */
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .about-page .team-swiper .swiper-slide:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Optional: Adding some media queries for responsiveness */
 @media (max-width: 768px) {
   .about-page .team-swiper .swiper-slide {
-      width: 90%; 
+    width: 90%; /* Slightly reduce width for smaller screens */
+    padding: 10px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 576px) {
+  .about-page .team-swiper .swiper-slide {
+    flex: 1 1 100%; /* One slide per row on small screens */
   }
 }
 
 .about-page .team .team-image {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  margin-bottom: 15px;
+  width: 100%;
+  max-width: 100px;
+  height:  100px;
   border-radius: 50%;
+  object-fit: cover; 
+  margin-bottom: 15px;
   border: 3px solid #F79420;
-  transition: transform 0.3s ease-in-out; 
+  transition: transform 0.3s ease-in-out;
 }
 
 .about-page .team .team-image:hover {
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
 .about-page .team .role {
@@ -1224,13 +1244,14 @@ canvas {
 
 /* Swiper Navigation and Pagination */
 .about-page .swiper-pagination-bullet {
-  background-color: #F79420; 
-  opacity: 0.5; 
-  transition: background-color 0.3s ease, opacity 0.3s ease; 
+  background-color: #F79420;
+  opacity: 0.5;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
 }
+
 .about-page .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #d17c1b;
-  opacity: 1; 
+  opacity: 1;
 }
 
 .about-page .swiper-button-next,
@@ -1240,7 +1261,7 @@ canvas {
 
 .about-page .swiper-button-next:hover,
 .about-page .swiper-button-prev:hover {
-  color: #d17c1b; 
+  color: #d17c1b;
 }
 
 /* Swiper Coverflow Effect */
@@ -1252,6 +1273,29 @@ canvas {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .about-page .team-swiper .swiper-slide {
-      padding: 10px;
+    padding: 10px;
+  }
+
+  .about-page .about-section {
+    padding: 20px;
+  }
+
+  .about-page .description-card {
+    padding: 15px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-page .about-section .vertical-heading {
+    font-size: 1.5rem;
+  }
+
+  .about-page .description-card {
+    padding: 10px;
+  }
+
+  .about-page .team-swiper .swiper-slide {
+    width: 100%; /* One slide per row on small screens */
   }
 }

@@ -145,7 +145,7 @@ def about(request):
             'name': 'Hajra',
             'role': 'Chapter Mentor',
             'bio': 'Hajra’s dedication and drive inspire others on their tech journeys. She’s always ready to lend a helping hand and share her passion for learning',
-            'image': 'djangogirlstz/images/team.jpeg' 
+            'image': 'djangogirlstz/images/Hajra.jpg' 
         },
         {
             'name': 'Zubeda',
