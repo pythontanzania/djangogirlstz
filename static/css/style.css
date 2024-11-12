@@ -1162,32 +1162,30 @@ canvas {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  width: 100%;
 }
 
-.about-page .team .swiper-wrapper {
-  display: flex;
-}
-
+/* Make sure swiper slide size is flexible */
 .about-page .team .swiper-slide {
-  /* width: 250px;  
-  height: 350px;  */
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  margin: 0 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden; 
+  overflow: hidden;
   text-align: center;
+  width: 90%;  /* Removed fixed width */
+  margin: 0 auto; /* Center the slides */
 }
 
 .about-page .team .swiper-slide img {
-  width: 100px; 
-  height: 100px; 
-  object-fit: cover; 
+  width: 50%;  /* Adjust image size relative to the container */
+  height: auto;
+  object-fit: cover;
   border-radius: 50%;
   margin-bottom: 20px;
 }
@@ -1209,27 +1207,20 @@ canvas {
   color: #666;
 }
 
+/* Navigation buttons */
 .about-page .team .swiper-button-next,
 .about-page .team .swiper-button-prev {
-  color: #F79420; 
+  color: #F79420;
+  font-size: 1.5rem;  /* Adjust button size responsively */
 }
 
 .about-page .team .swiper-pagination {
-  bottom: 10px;
+  bottom: 0px;
   color: #F79420;
+  text-align: center;
 }
 
-@media (max-width: 768px) {
-  .about-page .team .swiper-slide {
-    width: 200px;
-    height: 300px;
-  }
-
-  .about-page .team .swiper-slide img {
-    width: 80px;
-    height: 80px;
-  }
-}
+/* Style the pagination bullets */
 .about-page .team .swiper-pagination .swiper-pagination-bullet {
   background-color: #F79420;
 }
@@ -1238,11 +1229,38 @@ canvas {
   background-color: #D97317;
 }
 
-.about-page .team .swiper-button-next,
-.about-page .team .swiper-button-prev {
-  color: #F79420;
-}
-
 .about-page .team .swiper-pagination .swiper-pagination-bullet:hover {
   background-color: #F2A24B;
+}
+
+@media (max-width: 768px) {
+  .about-page .team .swiper-slide {
+    padding: 0.5rem;
+    margin: 0 auto;
+  }
+
+  .about-page .team .swiper-button-next,
+  .about-page .team .swiper-button-prev {
+    font-size: 1rem; /* Adjust size for small devices */
+  }
+  
+  /* Move the pagination to the bottom */
+  .about-page .team .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+  }
+
+  /* Resize image for small devices */
+  .about-page .team .swiper-slide img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-page .team .swiper-button-next,
+  .about-page .team .swiper-button-prev {
+    font-size: 2rem; /* Larger button size for larger devices */
+  }
 }
