@@ -276,7 +276,7 @@ body {
 /* Background Overlay */
 .community-page .background-overlay {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/static/djangogirlstz/images/Rectangle 45.png");
+    url("/static/djangogirlstz/images/Rectangle 45.webp");
   background-size: cover;
   background-position: center;
   height: 90vh;
@@ -348,17 +348,18 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border: none;
 }
 
 
 .community-page .left-card .info_card {
-  background-color: #f8f9fa;
-  padding: 100px 100px;
-  border-radius: 8px;
-  width: 100%; /* Ensures it occupies full width */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 50px 100px;
+  /* border-radius: 8px; */
+  width: 100%;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   position: relative;
   z-index: 1;
+  border: none;
 }
 
 @media (max-width: 768px) {
@@ -395,7 +396,7 @@ body {
 .community-page .swiper {
   width: 100%; 
   height: 50vh;
-  padding: 0; /* Ensures full-width display */
+  padding: 0; 
 }
 
 @media (max-width: 768px) {
@@ -426,7 +427,7 @@ body {
 /* Navigation and Pagination Styles */
 .community-page .swiper-button-next,
 .community-page .swiper-button-prev {
-  color: #F79420; 
+  color: white; 
   display: block;
 }
 
