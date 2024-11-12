@@ -288,10 +288,6 @@ body {
   background-repeat: no-repeat;
 }
 
-/* Links */
-.community-page a:hover {
-  color: #f79420;
-}
 
 /* Custom Card Styles */
 .community-page .custom-card {
@@ -455,7 +451,7 @@ body {
   transition: opacity 0.3s;
 }
 
-.swiper-pagination-bullet-active {
+.community-page .swiper-pagination-bullet-active {
   background-color: #F79420;
 }
 
