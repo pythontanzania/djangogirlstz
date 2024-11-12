@@ -103,5 +103,29 @@
     </div>
   </footer>
 </div>
+<!-- jQuery and Counting Script -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Function to animate the number counting
+        function animateCounter(target, start, end, duration) {
+            $({ count: start }).animate({ count: end }, {
+                duration: duration,
+                step: function () {
+                    $(target).text(Math.ceil(this.count)); // Update the text with the current count
+                },
+                complete: function() {
+                    // Append the "+" sign after the counting is done
+                    $(target).text($(target).text() + " +");
+                }
+            });
+        }
+
+        // Trigger the animation
+        animateCounter('#counter-communities', 0, 5, 2000); // Count from 0 to 5 in 2 seconds
+        animateCounter('#counter-chapter-leads', 0, 15, 2000); // Count from 0 to 15 in 2 seconds
+        animateCounter('#counter-django-girls', 0, 100, 2000); // Count from 0 to 100 in 2 seconds
+    });
+</script>
 
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
