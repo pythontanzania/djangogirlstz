@@ -107,13 +107,13 @@ def about(request):
         },
         {
             'name': 'Lupyana',
-            'role': 'Software Developer',
+            'role': 'Mentor',
             'bio': 'He’s still thinking of a fun fact to share!',
             'image': 'djangogirlstz/images/lupyana.png'
         },
         {
             'name': 'Fuad',
-            'role': 'Systems Engineer',
+            'role': 'Mentor',
             'bio': 'When he’s not engineering systems, Fuad is honing his skills as a professional pool table player.',
             'image': 'djangogirlstz/images/fuad.png'  
         },
@@ -126,8 +126,8 @@ def about(request):
         {
             'name': 'Sabrina',
             'role': 'Developer',
-            'bio': 'Sabrina is a team player and a developer who thrives both in collaboration and independent work!',
-            'image': 'djangogirlstz/images/team.jpeg'  
+            'bio': 'I calm myself during debugging by softly talking to the errors, almost like singing a lullaby, making the process more enjoyable.',
+            'image': 'djangogirlstz/images/Sabrina (1).jpeg'  
         },
         {
             'name': 'Thecla',
@@ -157,7 +157,7 @@ def about(request):
             'name': 'Debora',
             'role': 'Developer',
             'bio': 'Debora is a very curious thinker with a logical mind who loves to learn.',
-            'image': 'djangogirlstz/images/Debrah.jpeg' 
+            'image': 'djangogirlstz/images/Debora.jpeg' 
         },
         
     ]
