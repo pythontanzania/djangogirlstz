@@ -15,7 +15,7 @@
     </div>
 
     <!-- About Section -->
-    <section class="about-section mt-5 mb-5">
+    {% comment %} <section class="about-section mt-5 mb-5">
         <div class="container">
             <div class="col-md-12">
                 <h2 class="text-center custom-subheading" style="color:#F79420">About Django Girls</h2>
@@ -24,43 +24,35 @@
                 </p>
             </div>
         </div>
-    </section>
-
-
-        <h2 class="text-center custom-subheading" style="color:#F79420">Mission & Vision</h2>
+    </section> {% endcomment %}
+      <h2 class="text-center custom-subheading" style="color:#F79420">Mission & Vision</h2>
 
 
 
     <!-- Mission & Vision Section -->
-    <section class="mission-vision bg-body-secondary">
+    <section class="mission-vision ">
         <div class="container">
-            <!-- Mission Section -->
-            <div class="row align-items-center mission mb-5">
-                <div class="col-md-4 text-center">
-                    <div class="icon-container">
-                        <i class="fas fa-bullhorn mission-icon"></i>
-                    </div>
-                    <h2 class="mission-title">Mission</h2>
-                </div>
-                <div class="col-md-8">
+            <div class="row align-items-center">
+                <!-- Mission Column -->
+                <div class="col-md-6 text-center">
                     <div class="card">
+                        <div class="icon-container">
+                            <i class="fas fa-bullhorn mission-icon"></i>
+                        </div>
+                        <h2 class="mission-title">Mission</h2>
                         <p class="mission-description">
                             Our mission is to empower women by providing opportunities to learn and develop technical skills.
                         </p>
                     </div>
                 </div>
-            </div>
-    
-            <!-- Vision Section -->
-            <div class="row align-items-center vision mb-5">
-                <div class="col-md-4 text-center ">
-                    <div class="icon-container">
-                        <i class="fas fa-eye vision-icon"></i>
-                    </div>
-                    <h2 class="vision-title">Vision</h2>
-                </div>
-                <div class="col-md-8 ">
+                
+                <!-- Vision Column -->
+                <div class="col-md-6 text-center">
                     <div class="card">
+                        <div class="icon-container">
+                            <i class="fas fa-eye vision-icon"></i>
+                        </div>
+                        <h2 class="vision-title">Vision</h2>
                         <p class="vision-description">
                             Our vision is to create a world where every woman has access to the knowledge and resources to thrive in the tech industry.
                         </p>
@@ -69,6 +61,7 @@
             </div>
         </div>
     </section>
+    
     
 
     <!-- Team Section -->
