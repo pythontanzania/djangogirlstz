@@ -37,6 +37,13 @@ def events(request):
             form.save()
     return render(request, 'events.html', {'form': form})
 
+# def about(request):
+#     form = SubscriptionForm()
+#     if request.method == 'POST':
+#         form = SubscriptionForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#     return render(request, 'about.html', {'form': form})
 def code_of_conduct(request):
     return render(request, 'code_of_conduct.html')
 
@@ -84,3 +91,78 @@ def subscribe(request):
             form.save()
     return redirect('home')  
 
+def about(request):
+    team_members = [
+        {
+            'name': 'CatherineRose',
+            'role': 'Convener',
+            'bio': 'CatherineRose is dedicated to building an inclusive ecosystem that empowers everyone through skill development and collaboration.',
+            'image': 'djangogirlstz/images/c-catherinerose.png'
+        },
+        {
+            'name': 'Noah',
+            'role': 'Patron',
+            'bio': 'Noah combines his passion for engineering and development with his love for swimming, making a splash in both fields!',
+            'image': 'djangogirlstz/images/c-noah.png'
+        },
+        {
+            'name': 'Lupyana',
+            'role': 'Mentor',
+            'bio': 'He’s still thinking of a fun fact to share!',
+            'image': 'djangogirlstz/images/lupyana.png'
+        },
+        {
+            'name': 'Fuad',
+            'role': 'Mentor',
+            'bio': 'When he’s not engineering systems, Fuad is honing his skills as a professional pool table player.',
+            'image': 'djangogirlstz/images/fuad.png'  
+        },
+        {
+            'name': 'Glory',
+            'role': 'Chapter Lead - Ardhi University',
+            'bio': 'Glory loves turning imaginative ideas into reality through her passion for technology.',
+            'image': 'djangogirlstz/images/Glory.jpeg'  
+        },
+        {
+            'name': 'Sabrina',
+            'role': 'Developer',
+            'bio': 'I calm myself during debugging by softly talking to the errors, almost like singing a lullaby, making the process more enjoyable.',
+            'image': 'djangogirlstz/images/Sabrina (1).jpeg'  
+        },
+        {
+            'name': 'Thecla',
+            'role': 'Chapter Lead - UDSM',
+            'bio': 'Thecla brings the perfect mix of fun and focus—she’s dedicated to her work but knows how to keep things lively',
+            'image': 'djangogirlstz/images/Thecla.jpeg'  
+        },
+        {
+            'name': 'Basilisa',
+            'role': 'Chapter Lead - DIT',
+            'bio': 'Basilisa ensures that projects run smoothly and on time.',
+            'image': 'djangogirlstz/images/Basilisa.jpeg' 
+        },
+        {
+            'name': 'Hajra',
+            'role': 'Chapter Mentor',
+            'bio': 'Hajra’s dedication and drive inspire others on their tech journeys. She’s always ready to lend a helping hand and share her passion for learning',
+            'image': 'djangogirlstz/images/Hajra.jpg' 
+        },
+        {
+            'name': 'Zubeda',
+            'role': 'Chapter Lead - Mzumbe/Developer',
+            'bio': 'Zubeda is a dedicated soul with infectious energy, bringing a unique charm that brightens the team!',
+            'image': 'djangogirlstz/images/Zubeda.jpeg' 
+        },
+        {
+            'name': 'Debora',
+            'role': 'Developer',
+            'bio': 'Debora is a very curious thinker with a logical mind who loves to learn.',
+            'image': 'djangogirlstz/images/Debora.jpeg' 
+        },
+        
+    ]
+
+    context = {
+        'team_members': team_members
+    }
+    return render(request, 'about.html', context)

@@ -26,6 +26,9 @@
               <li style="color: #555; font-size: 16px;">
                 <a href="#" style="color: #555; text-decoration: none;">COMMUNITY GUIDELINES</a>
               </li>
+              <li style="color: #555; font-size: 16px;">
+                <a href="{% url 'about' %}" style="color: #555; text-decoration: none;">ABOUT</a>
+              </li>
             </ul>
           </div>
   
@@ -129,3 +132,43 @@
 </script>
 
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const teamSwiper = new Swiper('.team-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        centeredSlides: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        loop: true,
+        effect: 'coverflow',
+        coverflowEffect: {
+            rotate: 30,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                effect: 'slide',
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+        },
+    });
+</script>

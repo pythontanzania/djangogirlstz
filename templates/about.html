@@ -1,0 +1,89 @@
+{% extends "_base.html" %}
+{% load compress %}
+{% load static %}
+
+{% block content %}
+<div class="about-page">
+    <!-- Background Section -->
+    <div class="container-fluid p-0">
+        <div class="background-overlay flex-column justify-content-center align-items-center">
+            <div class="text-center">
+                <h1 class="display-3 custom-heading">ABOUT US</h1>
+                <p class="para">Join the Django Girls Tanzania community and Make a Difference.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    {% comment %} <section class="about-section mt-5 mb-5">
+        <div class="container">
+            <div class="col-md-12">
+                <h2 class="text-center custom-subheading" style="color:#F79420">About Django Girls</h2>
+                <p class="lead">
+                    Django Girls is a community that empowers women to organize free, one-day programming workshops by providing tools, resources, and support. We are a volunteer-run organization with hundreds of people contributing to bring more amazing women into the world of technology.
+                </p>
+            </div>
+        </div>
+    </section> {% endcomment %}
+      <h2 class="text-center custom-subheading" style="color:#F79420">Mission & Vision</h2>
+
+
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision ">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Mission Column -->
+                <div class="col-md-6 text-center">
+                    <div class="card">
+                        <div class="icon-container">
+                            <i class="fas fa-bullhorn mission-icon"></i>
+                        </div>
+                        <h2 class="mission-title">Mission</h2>
+                        <p class="mission-description">
+                            Our mission is to empower women by providing opportunities to learn and develop technical skills.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Vision Column -->
+                <div class="col-md-6 text-center">
+                    <div class="card">
+                        <div class="icon-container">
+                            <i class="fas fa-eye vision-icon"></i>
+                        </div>
+                        <h2 class="vision-title">Vision</h2>
+                        <p class="vision-description">
+                            Our vision is to create a world where every woman has access to the knowledge and resources to thrive in the tech industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <!-- Team Section -->
+    <section class="team mb-5">
+        <div class="container">
+            <h2 class="text-center custom-subheading" style="color:#F79420">Meet Our Team</h2>
+            <div class="swiper-container team-swiper">
+                <div class="swiper-wrapper">
+                    {% for member in team_members %}
+                    <div class="swiper-slide team-member text-center p-3">
+                        <img src="{% static member.image %}" alt="{{ member.name }}" class="img-fluid rounded-circle team-image">
+                        <h4>{{ member.name }}</h4>
+                        <p class="role">{{ member.role }}</p>
+                        <p class="bio">{{ member.bio }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
