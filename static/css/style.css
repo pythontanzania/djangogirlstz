@@ -579,122 +579,55 @@ body {
   color: white;
 }
 
-/* Resources-page */
-.resources-page .navbar {
-  background-color: transparent !important; /* Keep navbar transparent */
-  position: fixed; /* Fixed position */
-  width: 100%; /* Full width */
-  z-index: 1030; /* Ensure it’s above other content */
-}
-
-/* Global body styles */
-.resources-page body {
-  font-family: "Mulish", sans-serif; /* Added 'sans-serif' as a fallback */
-}
-
-/* Navbar item alignment */
-.resources-page .navbar-nav {
-  justify-content: center; /* Center the nav items */
-}
-
-/* Navbar link styles */
-.resources-page .nav-link {
+.resources-page .custom-heading {
   color: #f79420;
 }
 
-.resources-page .nav-link:hover {
-  color: #c77b1a;
-}
-
-/* Overlay styles */
-.resources-page .overlay {
-  position: absolute; /* Ensure overlay is positioned correctly */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 86%; /* Use viewport height for consistency */
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .overlay {
-    height: 20%; /* Adjust the height for small screens using vh */
-  }
-
-  .custom-card-img-overlay {
-    width: 100%;
-    height: auto;
-  }
-
-  .card-img-top {
-    height: 150px; /* Adjust card image height on smaller screens */
-  }
-}
-
-/* Card styling */
-.resources-page .card {
-  height: 100%; /* Ensure the card takes full height */
-  display: flex;
-  flex-direction: column;
-  border-radius: 0; /* Changed from none to 0 for clarity */
-}
-
-/* Card body styles */
-.resources-page .card-body {
-  flex-grow: 2; /* Ensure the card body takes up the remaining space */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Add a hover effect for the cards */
-.resources-page .card:hover {
-  transform: translateY(-5px);
-  transition: transform 0.2s ease-in-out;
-}
-
-/* Button styles */
-.resources-page .read-btn {
-  background-color: #f79420;
-  color: #fff;
-  border: none;
-  font-size: 1rem;
-  border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-  width: 100px; /* Set width as specified */
-  height: 56px; /* Set height as specified */
-  margin-top: 10px;
-}
-
-.resources-page .read-btn:hover {
-  background-color: #d67d1a; /* Darker shade for hover */
-  text-decoration: none;
-}
-
-/* Background overlay styles */
+/* resources-page */
 .resources-page .background-overlay {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/static/djangogirlstz/images/hero_resources.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+      url("/static/djangogirlstz/images/hero_resources.webp");
   background-size: cover;
   background-position: center;
   height: 90vh;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  background-repeat: no-repeat;
 }
+
+.resources-page .card {
+  border: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  height:100%;
+}
+
+.resources-page .card:hover {
+  transform: translateY(-5px);
+}
+
+.resources-page .read-btn {
+  background-color: #f79420;
+  color: white;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.resources-page .read-btn:hover {
+  background-color: #e68318;
+}
+
+.resources-page .card-img-top {
+  height: 200px;
+}
+
 /* Navbar styling */
 .dar-page .navbar {
-  background-color: transparent !important; /* Keep navbar transparent */
-  position: fixed; /* Fixed position */
-  width: 100%; /* Full width */
-  z-index: 1030; /* Ensure it’s above other content */
+  background-color: transparent !important; 
+  position: fixed; 
+  width: 100%; 
+  z-index: 1030; 
 }
 
 .dar-page .navbar-nav {
