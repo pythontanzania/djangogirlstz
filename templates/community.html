@@ -138,58 +138,40 @@
             </div>
         </div>
     </div> {% endcomment %}
-    
-    <div class="container mt-5">
-        <div class="row align-items-center">
-          <!-- Left Card -->
-          <div class="col-md-5 left-card">
-            <div class="info_card">
-              <h2>Discover Django Girls: A Visual Journey</h2>
-              <p>
-                Our community brings together individuals from various backgrounds, professions, and interests. By joining us, 
-                you'll have the opportunity to engage with a diverse range of perspectives, ideas, and experiences, enriching 
-                your own understanding of the world.
-              </p>
-              <p class="slide-through">Slide through ➔</p>
+       
+    <div class="p-3 mb-2 bg-body-secondary">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-3 left-card">
+                    <h3>Discover Django Girls: A Visual Journey</h3>
+                    <p>Our community brings together individuals from various backgrounds, professions, and interests. By joining us, you'll have the opportunity to engage with a diverse range of perspectives, ideas, and experiences, enriching your own understanding of the world.</p>
+                </div>
+                <div class="col-md-9 carousel-container bg-body-secondary">
+                   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                            <img src="{% static 'djangogirlstz/images/Rectangle 32.png' %}" class="d-block w-100" alt="Slide 1">
+                            </div>
+                             <div class="carousel-item">
+                                <img src="{% static 'djangogirlstz/images/Rectangle 45.png' %}" class="d-block w-100" alt="Slide 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'djangogirlstz/images/Rectangle 43.png' %}" class="d-block w-100" alt="Slide 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
             </div>
-          </div>
-                <!-- Carousel Section -->
-          <div class="col-md-7 carousel-container ">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-             
-      
-              <!-- Carousel Images -->
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="{% static 'djangogirlstz/images/Rectangle 32.png' %}" class="d-block w-100" alt="Slide 1">
-                </div>
-                <div class="carousel-item">
-                  <img src="{% static 'djangogirlstz/images/Rectangle 45.png' %}" class="d-block w-100" alt="Slide 2">
-                </div>
-                <div class="carousel-item">
-                  <img src="{% static 'djangogirlstz/images/Rectangle 43.png' %}" class="d-block w-100" alt="Slide 3">
-                </div>
-              </div>
-
-               <!-- Carousel Indicators -->
-               <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
-              </div>
-      
-              <!-- Carousel Controls -->
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"  data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"  data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>   
+</div>
     {% endblock %}
 
