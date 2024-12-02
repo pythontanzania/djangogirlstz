@@ -1,66 +1,34 @@
 {% extends "_base.html" %}
-{% load compress %} 
+{% load compress %}
 {% load static %}
 {% block content %}
 <div class="community-page">
-    
-    <div class="container-fluid p-0"> 
+
+    <div class="container-fluid p-0">
         <div class="background-overlay d-flex flex-column justify-content-center align-items-center">
             <div class="text-center">
-                <h1 class="display-3 custom-heading" style="color: #F79420; ">COMMUNITY</h1>
+                <h1 class="display-3 custom-heading" style="color: #F79420;">COMMUNITY</h1>
                 <p class="community-paragraph">Join the Django Girls Tanzania community and Make a Difference.</p>
             </div>
         </div>
     </div>
-    
-        
-    
-
-    
-    {% comment %} <div class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="{% static 'djangogirlstz/images/logoxbg.png' %}" class="img-fluid" alt="Logo" width="150" height="40.8">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">  
-                    <li class="nav-item">
-                        <a class=" h1 nav-link" href="{% url 'community' %}">Community</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="h1 nav-link" href="{% url 'events' %}">Workshops</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="h1 nav-link" href="{% url 'resources' %}">Resources</a>
-                    </li>
-                </ul>
-                <div class="d-flex">
-                    <a href="{% url 'register' %}" class="btn" style="background-color: #F79420; color: white;">Join Community</a>
-                </div>
-            </div>
-        </div>
-    </div> {% endcomment %}
-    
 
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="custom-card p-3">
                     <div class="icon">
-                        <img src="{% static 'djangogirlstz/images/Diversity.png' %}" alt="Diverse Perspectives" class="icon-img"> 
+                        <img src="{% static 'djangogirlstz/images/Diversity.png' %}" alt="Diverse Perspectives" class="icon-img">
                     </div>
                     <h5 class="card-title mt-5">Diverse Perspectives</h5>
                     <p class="card-text">Our community brings together individuals from various backgrounds, professions, and interests. By joining us, you'll have the opportunity to engage
                         with a diverse range of perspectives, ideas, and experiences, enriching your own understanding of the world.</p>
                 </div>
             </div>
-            <div class="col-md-4 ">
+            <div class="col-md-4">
                 <div class="custom-card p-3">
                     <div class="icon">
-                        <img src="{% static 'djangogirlstz/images/Omnichannel.png' %}" alt="Diverse Perspectives" class="icon-img"> 
+                        <img src="{% static 'djangogirlstz/images/Omnichannel.png' %}" alt="Diverse Perspectives" class="icon-img">
                     </div>
                     <h5 class="card-title mt-5">Networking Opportunities</h5>
                     <p class="card-text">Joining our community opens doors to valuable networking opportunities. Whether you're looking to connect with professionals in your field, seeking
@@ -70,108 +38,49 @@
             <div class="col-md-4">
                 <div class="custom-card p-3">
                     <div class="icon">
-                        <img src="{% static 'djangogirlstz/images/Learning.png' %}" alt="Diverse Perspectives" class="icon-img"> 
+                        <img src="{% static 'djangogirlstz/images/Learning.png' %}" alt="Diverse Perspectives" class="icon-img">
                     </div>
                     <h5 class="card-title mt-5">Learning and Growth</h5>
-                    <p class="card-text">Our community is a hub for continuous learning and personal growth. Through workshops, seminars, discussions, and other educational initiatives, you'll 
-                    have access to resources and support to enhance your skills, broaden your knowledge, and achieve your personal.</p>
+                    <p class="card-text">Our community is a hub for continuous learning and personal growth. Through workshops, seminars, discussions, and other educational initiatives, you'll
+                    have access to resources and support to enhance your skills, broaden your knowledge, and achieve your personal goals.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    {% comment %} <div class="card-body text-center">
-        <h1 class=" h1 card-title" style="font-family: Mulish;">Local Chapters</h1>
-        <p class="card-text" style="font-family: Mulish;">Check out our upcoming workshops below</p>
-    </div> {% endcomment %}
-    
-    {% comment %} <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-        <div class="col">
-            <div class="unique-card-style">
-                <img src="{% static 'djangogirlstz/images/Rectangle 108.png' %}" class="unique-card-img-top" alt="...">
-                <div class="unique-card-body">
-                    <p class="unique-card-text">Dar es Salaam Django Chapter &#x2192;</p>
+    <div class="container bg-body-secondary mt-5">
+        <div class="row g-0 align-items-center">
+            <!-- Left Card -->
+            <div class="col-md-5 left-card">
+                <div class="info_card ">
+                    <h2>Discover Django Girls: A Visual Journey</h2>
+                    <p>
+                        Our community brings together individuals from various backgrounds, professions, and interests. By joining us,
+                        you'll have the opportunity to engage with a diverse range of perspectives, ideas, and experiences, enriching
+                        your own understanding of the world.
+                    </p>
+                    <p class="slide-through">Slide through ➔</p>
                 </div>
             </div>
-        </div>
-        <div class="col">
-            <div class="unique-card-style">
-                <img src="{% static 'djangogirlstz/images/Rectangle 108.png' %}" class="unique-card-img-top" alt="...">
-                <div class="unique-card-body">
-                    <p class="unique-card-text">Dar es Salaam Django Chapter &#x2192;</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="unique-card-style">
-                <img src="{% static 'djangogirlstz/images/Rectangle 108.png' %}" class="unique-card-img-top" alt="...">
-                <div class="unique-card-body">
-                    <p class="unique-card-text">Dar es Salaam Django Chapter &#x2192;</p>
-                </div>
-            </div>
-        </div>
-    </div> {% endcomment %}
-    
-    {% comment %} <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
-        <div class="col">
-            <div class="unique-card-style">
-                <img src="{% static 'djangogirlstz/images/Rectangle 108.png' %}" class="unique-card-img-top" alt="...">
-                <div class="unique-card-body">
-                    <p class="unique-card-text">Dar es Salaam Django Chapter &#x2192;</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="unique-card-style">
-                <img src="{% static 'djangogirlstz/images/Rectangle 108.png' %}" class="unique-card-img-top" alt="...">
-                <div class="unique-card-body">
-                    <p class="unique-card-text">Dar es Salaam Django Chapter &#x2192;</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="unique-card-style">
-                <img src="{% static 'djangogirlstz/images/Rectangle 108.png' %}" class="unique-card-img-top" alt="...">
-                <div class="unique-card-body">
-                    <p class="unique-card-text">Dar es Salaam Django Chapter &#x2192;</p>
-                </div>
-            </div>
-        </div>
-    </div> {% endcomment %}
-       
-    <div class="p-3 mb-2 bg-body-secondary">
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-md-3 left-card">
-                    <h3>Discover Django Girls: A Visual Journey</h3>
-                    <p>Our community brings together individuals from various backgrounds, professions, and interests. By joining us, you'll have the opportunity to engage with a diverse range of perspectives, ideas, and experiences, enriching your own understanding of the world.</p>
-                </div>
-                <div class="col-md-9 carousel-container bg-body-secondary">
-                   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                            <img src="{% static 'djangogirlstz/images/Rectangle 32.png' %}" class="d-block w-100" alt="Slide 1">
-                            </div>
-                             <div class="carousel-item">
-                                <img src="{% static 'djangogirlstz/images/Rectangle 45.png' %}" class="d-block w-100" alt="Slide 2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{% static 'djangogirlstz/images/Rectangle 43.png' %}" class="d-block w-100" alt="Slide 3">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>   
-</div>
-    {% endblock %}
 
+
+            <div class="col-md-7 p-0">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"><img src="{% static 'djangogirlstz/images/pic1.webp' %}" alt="Slide 1"></div>
+                        <div class="swiper-slide"><img src="{% static 'djangogirlstz/images/pic2.webp' %}" alt="Slide 2"></div>
+                        <div class="swiper-slide"><img src="{% static 'djangogirlstz/images/pic3.webp' %}" alt="Slide 3"></div>
+                    </div>
+                    <!-- pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
