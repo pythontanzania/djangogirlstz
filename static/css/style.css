@@ -406,8 +406,7 @@ body {
 
 /* Carousel Styling */
 .community-page .carousel-container {
-  position: relative;
-  margin-left: -200px; 
+  position: relative; 
   z-index: 2;
 }
 /* Media Query for Small Devices */
@@ -954,7 +953,6 @@ canvas {
   width: 100%;
 }
 
-/* Make sure swiper slide size is flexible */
 .about-page .team .swiper-slide {
   background-color: #fff;
   border-radius: 10px;
