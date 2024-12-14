@@ -361,15 +361,15 @@ body {
   font-size: 1rem;
   text-align: center;
 }
+.community-page .left-card {
+  margin: 0;
+  padding: 0;
+}
 
-
-/* Carousel Container */
 .community-page .left-card .info_card {
-  background-color: #f8f9fa; 
-  padding: 100px 80px;
-  border-radius: 8px;
-  width: 80%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin: 0;
+  width: 100%;
+  padding:80px 50px;
   position: relative;
   z-index: 1;
 }
@@ -396,59 +396,145 @@ body {
   margin-bottom: 15px;
 }
 
-.community-page .left-card .slide-through {
-  font-size: 16px;
-  font-weight: bold;
-  color: #ff7e00;
-  display: inline-block;
-  margin-top: 10px;
-}
 
-/* Carousel Styling */
-.community-page .carousel-container {
-  position: relative; 
-  z-index: 2;
-}
-/* Media Query for Small Devices */
-@media (max-width: 768px) { 
-  .community-page .carousel-container {
-    margin-left: 0;
-  }
-}
-
-.community-page .carousel-inner img {
-  /* max-height: 500px;  */
-  object-fit: cover;
-  border-radius: 2px;
+/* Swiper Container */
+.community-page .swiper {
   width: 100%;
-  height:auto;
-}
-@media (max-width: 768px) {
-  .community-page .carousel-inner img {
-    max-height: 300px; 
-  }
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
-.community-page .carousel-indicators {
-  position: static;
-  margin-top: 20px;
+/* Swiper Wrapper */
+.community-page .swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Swiper Slides */
+.community-page .swiper-slide {
   display: flex;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 70%;
+  background-color: #f8f9fa; 
 }
 
-.community-page .carousel-indicators button {
+.community-page .swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Swiper Navigation Buttons */
+.community-page .swiper-button-prev,
+.community-page .swiper-button-next {
+  color: #f79420;
+  font-size: 24px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.community-page .swiper-button-prev:hover,
+.community-page .swiper-button-next:hover {
+  opacity: 1;
+}
+
+.community-page .swiper-button-prev {
+  left: 10px;
+}
+
+.community-page .swiper-button-next {
+  right: 10px;
+}
+
+/* Swiper Pagination */
+.community-page .swiper-pagination {
+  bottom: 15px;
+  text-align: center;
+}
+
+.community-page .swiper-pagination-bullet {
+  background: #d3d3d3;
   width: 12px;
   height: 12px;
-  border-radius: 50%;
-  background-color: #ff7e00;
-  border: none;
-  opacity: 0.6;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.community-page .carousel-indicators .active {
+.community-page .swiper-pagination-bullet-active {
+  background: #f79420;
+  transform: scale(1.2);
   opacity: 1;
-  background-color: #ff7e00;
 }
+
+@media (max-width: 768px) {
+  .community-page .left-card .info_card {
+    padding: 20px;  
+    box-shadow: none; 
+  }
+
+  /* Adjust swiper slide height for small screens */
+  .community-page .swiper-slide {
+    height: 250px; /
+  }
+
+  /* Hide navigation buttons on small screens */
+  .community-page .swiper-button-prev,
+  .community-page .swiper-button-next {
+    display: none;
+  }
+
+  /* Adjust pagination */
+  .community-page .swiper-pagination {
+    bottom: 10px;
+  }
+
+  /* Adjust left card layout */
+  .community-page .left-card {
+    padding: 20px; /* Add some padding for mobile */
+  }
+
+  /* Adjust left card text */
+  .community-page .left-card h2 {
+    font-size: 22px;
+  }
+
+  .community-page .left-card p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .community-page .left-card .slide-through {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff7e00;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  /* Adjust container and columns layout */
+  .community-page .container {
+    padding: 0 15px; /* Reduce padding for mobile */
+  }
+
+  .community-page .row {
+    display: block; /* Stack the left card and swiper on small screens */
+  }
+
+  .community-page .col-md-4,
+  .community-page .col-md-8 {
+    width: 100%;
+    padding: 0; /* Remove any extra padding on mobile */
+  }
+}
+
+
+
 
 /* events-page */
 .events-page .background-overlay {

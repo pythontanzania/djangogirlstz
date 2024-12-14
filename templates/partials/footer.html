@@ -174,9 +174,9 @@
 </script>
 <script>
   const communitySwiper = new Swiper('.community-swiper', {
-      slidesPerView: 2, // Show 2 slides per view
-      spaceBetween: 20, // Add spacing between slides
-      freeMode: true, // Enable free scrolling
+      slidesPerView: 2, 
+      spaceBetween: 10, 
+      freeMode: true, 
       pagination: {
           el: '.swiper-pagination',
           clickable: true,
@@ -185,13 +185,13 @@
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
       },
-      loop: false, // Optional: Disable loop for this Swiper
+      loop: true, 
       breakpoints: {
           640: {
-              slidesPerView: 1, // Adjust for smaller screens
+              slidesPerView: 1, 
           },
           1024: {
-              slidesPerView: 2, // Revert to 2 slides on larger screens
+              slidesPerView: 2, 
           },
       },
   });
