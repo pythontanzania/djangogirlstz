@@ -263,8 +263,6 @@ body {
   margin-top: 50px;
 }
 
-/* community */
-
 /* General Body Styles */
 .community-page body {
   font-family: "Mulish", sans-serif;
@@ -275,10 +273,10 @@ body {
   box-sizing: border-box;
 }
 
-/* Links */
+/* Background Overlay */
 .community-page .background-overlay {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/static/djangogirlstz/images/Rectangle 45.png");
+    url("/static/djangogirlstz/images/Rectangle 45.webp");
   background-size: cover;
   background-position: center;
   height: 90vh;
@@ -289,31 +287,7 @@ body {
   color: white;
   background-repeat: no-repeat;
 }
-.community-page a:hover {
-  color: #f79420;
-}
 
-/* Buttons */
-.community-page .btn {
-  transition: all 0.3s ease-in-out;
-}
-
-.community-page .btn:hover {
-  opacity: 0.9;
-}
-
-/* Navbar for Mobile View */
-@media (max-width: 768px) {
-  .community-page .navbar-collapse {
-    background-color: #000;
-    padding: 1rem;
-  }
-
-  .community-page .navbar .nav-link {
-    padding: 0.5rem 1rem;
-    color: white;
-  }
-}
 
 /* Custom Card Styles */
 .community-page .custom-card {
@@ -332,9 +306,9 @@ body {
 
 @media (max-width: 768px) {
   .community-page .card-container {
-    flex-direction: column; 
+    flex-direction: column;
   }
-  
+
   .community-page .custom-card {
     margin: 10px 0;
   }
@@ -374,19 +348,19 @@ body {
   z-index: 1;
 }
 
-/* Media Query for Small Devices */
 @media (max-width: 768px) {
   .community-page .left-card .info_card {
     padding: 20px;
     width: 100%;
-    box-shadow: none; 
+    box-shadow: none;
   }
 }
 
+
+/* Text Styles */
 .community-page .left-card h2 {
   font-size: 26px;
   font-weight: bold;
-  /* margin-bottom: 15px; */
 }
 
 .community-page .left-card p {
@@ -535,7 +509,6 @@ body {
 
 
 
-
 /* events-page */
 .events-page .background-overlay {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -664,55 +637,108 @@ body {
   color: white;
 }
 
-.resources-page .custom-heading {
+/* Resources-page */
+.resources-page .navbar {
+  background-color: transparent !important; /* Keep navbar transparent */
+  position: fixed; /* Fixed position */
+  width: 100%; /* Full width */
+  z-index: 1030; /* Ensure it’s above other content */
+}
+
+/* Global body styles */
+.resources-page body {
+  font-family: "Mulish", sans-serif; /* Added 'sans-serif' as a fallback */
+}
+
+/* Navbar item alignment */
+.resources-page .navbar-nav {
+  justify-content: center; /* Center the nav items */
+}
+
+/* Navbar link styles */
+.resources-page .nav-link {
   color: #f79420;
 }
 
-/* resources-page */
-.resources-page .background-overlay {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-      url("/static/djangogirlstz/images/hero_resources.webp");
-  background-size: cover;
-  background-position: center;
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
+.resources-page .nav-link:hover {
+  color: #c77b1a;
 }
 
+/* Overlay styles */
+.resources-page .overlay {
+  position: absolute; /* Ensure overlay is positioned correctly */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 86%; /* Use viewport height for consistency */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .overlay {
+    height: 20%; /* Adjust the height for small screens using vh */
+  }
+
+  .custom-card-img-overlay {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-img-top {
+    height: 150px; /* Adjust card image height on smaller screens */
+  }
+}
+
+/* Card styling */
 .resources-page .card {
-  border: none;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-  height:100%;
+  height: 100%; /* Ensure the card takes full height */
+  display: flex;
+  flex-direction: column;
+  border-radius: 0; /* Changed from none to 0 for clarity */
 }
 
+/* Card body styles */
+.resources-page .card-body {
+  flex-grow: 2; /* Ensure the card body takes up the remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Add a hover effect for the cards */
 .resources-page .card:hover {
   transform: translateY(-5px);
+  transition: transform 0.2s ease-in-out;
 }
 
+/* Button styles */
 .resources-page .read-btn {
   background-color: #f79420;
-  color: white;
+  color: #fff;
   border: none;
-  transition: background-color 0.3s;
+  font-size: 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  width: 100px; /* Set width as specified */
+  height: 56px; /* Set height as specified */
+  margin-top: 10px;
 }
 
 .resources-page .read-btn:hover {
-  background-color: #e68318;
+  background-color: #d67d1a; /* Darker shade for hover */
+  text-decoration: none;
 }
 
-.resources-page .card-img-top {
-  height: 200px;
-}
-
-.dar-page .background-overlay{
+/* Background overlay styles */
+.resources-page .background-overlay {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-   url("/static/djangogirlstz/images/About.webp");
+    url("/static/djangogirlstz/images/hero_resources.jpg");
   background-size: cover;
   background-position: center;
-  position: relative;
   height: 90vh;
   width: 100%;
   display: flex;
@@ -720,8 +746,187 @@ body {
   align-items: center;
   color: white;
   background-repeat: no-repeat;
-  z-index: 1;
 }
+/* Navbar styling */
+.dar-page .navbar {
+  background-color: transparent !important; /* Keep navbar transparent */
+  position: fixed; /* Fixed position */
+  width: 100%; /* Full width */
+  z-index: 1030; /* Ensure it’s above other content */
+}
+
+.dar-page .navbar-nav {
+  justify-content: center; /* Center the nav items */
+}
+
+.dar-page .nav-link {
+  color: #f79420;
+}
+
+.dar-page .nav-link:hover {
+  color: #c77b1a;
+}
+
+/* Card styling */
+.dar-page .card {
+  border-radius: 0;
+  height: 85vh;
+  overflow: hidden;
+  border: none;
+  background-color: transparent;
+}
+
+/* Overlay styles */
+.dar-page .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Image overlay styling */
+.dar-page .card-img-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* Community paragraph styling */
+.dar-page .community-paragraph {
+  color: white;
+}
+
+/* Community heading styling */
+.dar-page .community-heading {
+  color: #f79420;
+  font-size: 48px;
+  font-family: "Munish", sans-serif;
+  font-weight: 900;
+}
+
+/* Container styling */
+.dar-page .container {
+  padding-top: 20px;
+  padding: 0; /* Ensure no padding */
+  width: 100%; /* Full width */
+}
+
+/* Row styling */
+.dar-page .row {
+  border-bottom: 1px solid black;
+  margin-left: auto; /* Center the row */
+  margin-right: auto; /* Center the row */
+}
+
+/* Column heading styling */
+.dar-page .col h2 {
+  font-family: "Mulish", sans-serif;
+  font-size: 96px;
+  font-weight: 600;
+  line-height: 120.48px;
+}
+
+.dar-page .col p {
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 40.16px;
+}
+
+/* Custom class to remove horizontal borders */
+.dar-page .no-horizontal-line {
+  border: none; /* Ensure no unwanted borders around the container */
+  padding: 0; /* Avoid any default padding issues */
+}
+
+/* Apply vertical borders between columns */
+.dar-page .border-left-only {
+  border-left: 2px solid #ccc; /* Vertical line between columns */
+  border-top: none; /* Ensure no top border is added */
+  border-bottom: none; /* Ensure no bottom border */
+  margin: 0;
+  padding: 0;
+}
+
+/* No border for the first column */
+.dar-page .no-horizontal-line .col:first-child {
+  border-left: none;
+}
+
+/* Reset margins and paddings for headings and paragraphs */
+.dar-page .container h1,
+.dar-page .container h2,
+.dar-page .container p {
+  margin: 0; /* Remove margins */
+  padding: 0; /* Remove padding */
+}
+
+/* Custom class to remove horizontal lines specifically */
+.dar-page .no-horizontal-line .col {
+  padding-top: 0; /* Ensure no padding that might create a horizontal effect */
+  padding-bottom: 0;
+}
+
+/* Main heading styling */
+.dar-page h1 {
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+.dar-page .view-all-btn {
+  background-color: #f79420;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 318px;
+}
+
+/* Custom image styling */
+.dar-page .custom-image {
+  height: 308px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* Ensure no unwanted borders or horizontal lines */
+.dar-page .container,
+.dar-page .row {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Profile picture styling */
+.dar-page .profile-pic {
+  width: 80px;
+  height: 80px;
+  margin-top: -40px;
+  border: 5px solid white;
+}
+
+/* Social icons container styling */
+.dar-page .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* #c {
+  height: 60vh;
+  width: 100%;
+  overflow-y: hidden;
+} */
+
 canvas {
   display: block;
   transition: all 0.3s ease;
@@ -1041,98 +1246,26 @@ canvas {
 
 .about-page .team .swiper-slide {
   background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  text-align: center;
-  width: 90%;  
-  margin: 0 auto; 
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
 }
 
-.about-page .team .swiper-slide img {
-  width: 100px;  
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 20px;
+.code_of_conduct-page .card-conduct:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-.about-page .team .swiper-slide h4 {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-bottom: 10px;
+.code_of_conduct-page.text-start {
+  text-align: left;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-.about-page .team .swiper-slide .role {
-  font-size: 1rem;
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.about-page .team .swiper-slide .bio {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-/* Navigation buttons */
-.about-page .team .swiper-button-next,
-.about-page .team .swiper-button-prev {
-  color: #F79420;
-  font-size: 1.5rem;  /* Adjust button size responsively */
-}
-
-.about-page .team .swiper-pagination {
-  bottom: 0px;
-  color: #F79420;
-  text-align: center;
-}
-
-/* Style the pagination bullets */
-.about-page .team .swiper-pagination .swiper-pagination-bullet {
-  background-color: #F79420;
-}
-
-.about-page .team .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #D97317;
-}
-
-.about-page .team .swiper-pagination .swiper-pagination-bullet:hover {
-  background-color: #F2A24B;
-}
-
-@media (max-width: 768px) {
-  .about-page .team .swiper-slide {
-    padding: 0.5rem;
-    margin: 0 auto;
-  }
-
-  .about-page .team .swiper-button-next,
-  .about-page .team .swiper-button-prev {
-    font-size: 1rem; 
-  }
-  
-  /* Move the pagination to the bottom */
-  .about-page .team .swiper-pagination {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-  }
-
-  /* Resize image for small devices */
-  .about-page .team .swiper-slide img {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-@media (min-width: 768px) {
-  .about-page .team .swiper-button-next,
-  .about-page .team .swiper-button-prev {
-    font-size: 2rem; 
-  }
+.code_of_conduct-page.card-title {
+  margin-bottom: 1rem;
+  color: #f79420;
 }
