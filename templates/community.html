@@ -1,4 +1,6 @@
 {% extends "_base.html" %}
+{% block title %}DjangoGirls Tanzania Community - Empowering Women in Tech{% endblock %}
+{% block meta_description %}Join DjangoGirls Tanzania’s community to connect with women in tech and grow your coding skills in a supportive environment.{% endblock %}
 {% load compress %}
 {% load static %}
 {% block content %}
@@ -48,10 +50,10 @@
         </div>
     </div>
 
-    <div class="container bg-body-secondary mt-5">
-        <div class="row g-0 align-items-center">
+    <div class="container mt-5">
+        <div class="row g-0 bg-body-secondary align-items-center">
             <!-- Left Card -->
-            <div class="col-md-5 left-card">
+            <div class="col-md-4 left-card">
                 <div class="info_card ">
                     <h2>Discover Django Girls: A Visual Journey</h2>
                     <p>
@@ -59,13 +61,12 @@
                         you'll have the opportunity to engage with a diverse range of perspectives, ideas, and experiences, enriching
                         your own understanding of the world.
                     </p>
-                    <p class="slide-through">Slide through ➔</p>
                 </div>
             </div>
 
 
-            <div class="col-md-7 p-0">
-                <div class="swiper">
+            <div class="col-md-8 p-0">
+                <div class="swiper community-swiper">   
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
