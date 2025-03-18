@@ -87,7 +87,7 @@
         <p class="mb-0">Made by the Djangogirls Community</p>
       </div>
       <div class="col-12 col-md-4  text-muted">
-        <p class="mb-0">© 2024 All rights reserved.</p>
+        <p class="mb-0">© 2025 All rights reserved.</p>
       </div>
       <div class="col-12 col-md-4 ">
         <a href="https://www.instagram.com/djangogirlstz/" class="icon mx-2" aria-label="Instagram">
@@ -133,43 +133,51 @@
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-    const teamSwiper = new Swiper('.team-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        centeredSlides: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
+   const teamSwiper = new Swiper('.team-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    centeredSlides: false,
+    // pagination: {
+    //     el: '.swiper-pagination',
+    //     clickable: true,
+    // },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    loop: true,
+    effect: 'coverflow',
+    coverflowEffect: {
+        rotate: 30,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+    },
+    speed: 400, // Add speed for smooth transitions
+    breakpoints: {
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            effect: 'slide',
         },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
         },
-        loop: true,
-        effect: 'coverflow',
-        coverflowEffect: {
-            rotate: 30,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
         },
-        breakpoints: {
-            640: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                effect: 'slide',
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 40,
-            },
+    },
+    on: {
+        slideChangeTransitionStart: function () {
+            // Remove inline styles that might cause issues
+          
         },
-    });
+    },
+});
+
 </script>
 <script>
   const communitySwiper = new Swiper('.community-swiper', {
